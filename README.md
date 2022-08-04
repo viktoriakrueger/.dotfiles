@@ -4,7 +4,7 @@
 - install [cygwin](https://cygwin.com/setup-x86_64.exe)
 - pick `wget`
 
-## package installer
+## package manager
 
 ```
 if [[ "$(uname)" == "Darwin" ]]; then
