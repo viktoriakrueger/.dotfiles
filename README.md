@@ -37,23 +37,23 @@ fi
 
 `git clone https://github.com/alexchaichan/.password-store.git ~/.password-store`
 
-## store `.gnupg` repo into `~/`
+## store `.gnupg` into `~/`
 
 ## run installation file
 
 `source ~/.dotfiles/bootstrap.sh`
 
-## calcurse config
+<!-- ## calcurse config -->
+<!---->
+<!-- ``` -->
+<!-- calcurse-caldav --init=two-way -->
+<!---->
+<!-- ln -sf ~/Dropbox/iphone/todo ~/.calcurse -->
+<!-- ``` -->
 
-```
-calcurse-caldav --init=two-way
-
-ln -sf ~/Dropbox/iphone/todo ~/.calcurse
-```
-
-### run light version
-
-`source ~/.dotfiles/light.sh`
+<!-- ### run light version -->
+<!---->
+<!-- `source ~/.dotfiles/light.sh` -->
 
 ### cygwin
 
