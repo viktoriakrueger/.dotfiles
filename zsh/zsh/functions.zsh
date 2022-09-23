@@ -107,14 +107,6 @@ synchro(){
     mbsync posteo
 }
 
-todo(){
-    vim $DROPBOX/todo.md
-}
-
-odot(){
-    glow $DROPBOX/todo.md
-}
-
 #####################################################
 # zsh functions                                     #
 #####################################################
