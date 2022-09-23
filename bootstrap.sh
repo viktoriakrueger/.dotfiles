@@ -43,6 +43,11 @@ elif [[ "$os" == "linux" ]]; then
 	pacman -S --needed - < $DOTFILES/arch/pacman/Pacmanfile
 fi
 
+# zathura
+if [[ "$os" == "osx" ]]; then
+  source ~/.dotfiles/zathura/installer.sh
+fi
+
 # install applications
 if [[ "$os" == "osx" ]]; then
 	source $DOTFILES/osx/applications.sh
