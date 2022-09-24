@@ -31,6 +31,9 @@ export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
 export CONFIG=$HOME/.config
 
+#export PATH=/opt/homebrew/bin:$PATH
+export PATH=$HOME/bin:$PATH
+
 # default editor
 export EDITOR=nvim
 export TERM=screen-256color
