@@ -30,3 +30,26 @@ wget "https://www.synaptics.com/sites/default/files/exe_files/2022-07/DisplayLin
 sudo installer -pkg ~/DisplayLink\ Manager\ Graphics\ Connectivity1.7.1-EXE.pkg -target /Applications
 cd ~/
 rm DisplayLink\ Manager\ Graphics\ Connectivity1.7.1-EXE.pkg
+
+# zathura
+
+brew tap zegervdv/zathura
+
+brew install zathura
+
+brew install zathura-pdf-poppler
+
+mkdir -p $(brew --prefix zathura)/lib/zathura
+
+ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
+
+brew unlink girara
+
+brew unlink zathura
+
+brew install girara --HEAD
+brew install zathura --HEAD
+
+mkdir -p $(brew --prefix zathura)/lib/zathura
+ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
+
