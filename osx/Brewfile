@@ -109,6 +109,7 @@ cask "rstudio"
 cask "skim"
 cask "steam"
 cask "vlc"
+cask "visual-studio-code"
 cask "xquartz"
 cask "zoom"
 mas "Amphetamine", id: 937984704
