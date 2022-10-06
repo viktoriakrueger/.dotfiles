@@ -266,6 +266,10 @@ config.bind('M', 'hint links spawn mpv {hint-url}')
 config.bind("Y", "spawn --userscript youtube_mp3_downloader.sh")
 config.bind("X", "spawn --userscript youtube_downloader.sh")
 
+config.bind('e', 'spawn --userscript dictcc')
+config.bind('E', 'spawn --userscript readability')
+
+
 # keybindings navigation
 
 # unbindings
