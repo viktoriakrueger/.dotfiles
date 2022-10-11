@@ -268,7 +268,8 @@ config.bind("X", "spawn --userscript youtube_downloader.sh")
 
 config.bind('e', 'spawn --userscript dictcc')
 config.bind('E', 'spawn --userscript readability')
-
+config.bind('W', 'spawn --userscript wiki')
+config.bind('z', 'spawn --userscript duden')
 
 # keybindings navigation
 
