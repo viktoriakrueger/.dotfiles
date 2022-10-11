@@ -1,107 +1,111 @@
 ---
-title: "TITLE"
-subtitle: "SUBTITLE"
-date: "XX/XX/202X" 
+title: "TITLE" #change title here
+subtitle: "SUBTITLE" #change subtitle here
+date: "XX/XX/202X" #change date here
 output:
   pdf_document:
+    pandoc_args:
+      - --lua-filter=wordcount.lua
+      - --metadata=wordcount=process
     latex_engine: pdflatex #xelatex #lualatex #pdflatex
     includes:
-      in_header: /Users/user/Dropbox/styles/style.sty
+      in_header: styles/style.sty #include styling
     #keep_tex:  true
   bookdown::pdf_book:
-    citation_package: biblatex #natbib #biblatex
-bibliography: /Users/user/Dropbox/literature.bib
-csl: /Users/user/Dropbox/styles/my.csl
-lang: de
-fontsize: 12pt
+    citation_package: biblatex  #natbib #biblatex
+bibliography: literature.bib #include bibliography
+csl: styles/apa.csl #inclue citation styleing
+lang: de #change language here
+fontsize: 12pt #change font size here #max=12
+urlcolor: "blue"
 ---
 
-<!-- read data -->
+<!-- this chunk is your setup-chunk  -->
+
+```{r setup, include=FALSE}
+ knitr::opts_chunk$set(
+ echo = FALSE,
+ message = FALSE,
+ warning = FALSE
+ )
+```
+
+<!-- load libraries -->
 
 ```{r}
-packages <- c("tidyverse")
+
+packages <- c("tidyverse","stargazer") # put your used packages in this vector
 
 installed_packages <- packages %in% rownames(installed.packages())
 
+# if the package is installed it has been loaded, if not, it has been installed and then loaded
 if (any(installed_packages == FALSE)) {
   install.packages(packages[!installed_packages])
 }
 
-# invisible(lapply(packages, library, character.only = TRUE))
+# library all packages from the vector packages
+invisible(lapply(packages, library, character.only = TRUE))
 
-if (!exists("")) {
- <- readr::read_csv("")  
-}
 ```
 
+<!-- load data -->
 
-
-<!-- title -->
-\pagenumbering{gobble}
-
-
-```{r, child=c('children/title.rmd')} 
+```{r}
+data(starwars) #example dataframe
 ```
 
-<!-- comment ou at the end -->
-\pagebreak 
-\listoftodos
-<!-- comment ou at the end -->
-<!-- and comment in styles/style.sty/notes damit die notes verschwinden-->
+<!-- include title -->
+\pagenumbering{gobble} <!-- disable page numbering   -->
 
-\pagebreak 
-\pagenumbering{roman}
-
-\setstretch{1.5}
-```{r, child=c('children/abstract.Rmd')} 
+```{r, child=c('children/title.Rmd')}
 ```
 
+\pagebreak <!-- new page -->
+\pagenumbering{roman} <!-- set page numbering to roman numbers -->
 
-\setstretch{1} 
-\pagebreak 
+<!-- inclde abstract -->
+
+\setstretch{1.5} <!-- line spaceing 1.5-->
+```{r, child=c('children/abstract.Rmd')}
+```
+
+<!-- inclue lof, lot, toc -->
+
+\setstretch{1}
+\pagebreak
 \listoffigures
 
-\pagebreak 
+\pagebreak
 \listoftables
 
-\pagebreak 
+\pagebreak
 \tableofcontents
 
-\pagebreak 
-\pagenumbering{arabic}
+\pagebreak
+\pagenumbering{arabic} <!-- set page numbering to arabic numbers -->
 
+<!-- include chapter / children -->
 
-
-
-<!-- children -->
-\setstretch{1.5} 
-```{r, child=c('children/einleitung.Rmd', 'children/kapitel1.rmd','children/kapitel2.rmd','children/kapitel3.rmd','children/kapitel4.rmd', 'children/schluss.rmd')} 
+\setstretch{1.5} <!-- set line spaceing -->
+```{r, child=c('children/introduction.rmd', 'children/literature_review.rmd', 'children/hypotheses.rmd', 'children/operationalization.rmd', 'children/analysis.rmd', 'children/conclusion.rmd')}
 ```
 
+<!-- inlude bibliography -->
 
-
-
-
-
-\pagebreak  
+\pagebreak
 # Literaturverzeichnis
-
-\setlength{\parindent}{-0.2in}
-\setlength{\leftskip}{0.2in}
-\setlength{\parskip}{8pt}
-\noindent
-
 <div id="refs"></div>
 
+<!-- inlude apendix -->
 
-
-
-\pagebreak 
+\pagebreak
 \pagenumbering{gobble}
-# Anhang {-} 
 
+# Anhang {-}
 
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\thispagestyle{empty}
+\pagenumbering{gobble}
 
-```{r, child=c('children/apendix.Rmd')} 
+```{r, child=c('children/apendix.Rmd')}
 ```
+

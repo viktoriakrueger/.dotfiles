@@ -1,20 +1,21 @@
+
 **Seminararbeit von:**
 
 \vskip0.25cm
 
-Chaichan, Aleksej
+NAME
 
-matrikelnummer \hspace{1em}
+MATRIKELNUMMER \hspace{1em} 
 
-adresse
+ADRESSE
 
-mail \hspace{1em}
+MAIL \hspace{1em} 
 
-01726830875
+TEL.NR.
 
-HF:  \hspace{1em}
+HF:  - X. Fachsemester \hspace{1em} 
 
-NF: 
+NF:  - X. Fachsemester
 
 \vskip0.5cm
 
@@ -22,7 +23,7 @@ NF:
 
 NAME_KURS
 
-Frau / Herr Prof. Dr. NACHNAME, VORNAME
+Frau / Herr Prof. Dr. NACHNAME, VORNAME 
 
 Universität Kassel
 
