@@ -42,4 +42,5 @@ vim_plugins=(
  'ThePrimeagen/harpoon'
  'easymotion/vim-easymotion'
  'dhruvasagar/vim-table-mode'
+ 'wfxr/minimap.vim'
 )

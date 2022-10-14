@@ -101,9 +101,10 @@ vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 vim.g.rout_follow_colorscheme = 1
 
 -- plugin-manager
-vim.cmd('call nvim_create_user_command(\'PlugInstall\', \'! source ~/.dotfiles/nvim/plugin_manager.sh\', {})')
+vim.cmd('call nvim_create_user_command(\'PlugInstall\', \'! source ~/.dotfiles/vim/plugin_manager.sh\', {})')
 
 vim.cmd('call nvim_create_user_command(\'PlugUpdate\', \'! cd $VDOTDIR/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd   \', {})')
 
 -- render function for .rmd
 vim.cmd('call nvim_create_user_command(\'Render\', \'!  R -e \"rmarkdown::render(\\"`realpath %`\\")\" && FILE=\"`realpath %`\" && tmux neww zathura ${FILE/rmd/pdf} && tmux last-window \', {})')
+
