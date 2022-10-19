@@ -30,3 +30,7 @@ ___
 
 - record screen with "screen record w/ audio"
 ___
+
+### posteo mail / carddav caldav
+
+posteo.de

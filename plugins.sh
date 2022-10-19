@@ -6,7 +6,7 @@ source $DOTFILES/zsh/plugin_manager.sh
 
 # nvim
 
-source $DOTFILES/nvim/plugin_manager.sh
+source $DOTFILES/vim/plugin_manager.sh
 
 # tmux
 
