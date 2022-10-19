@@ -11,6 +11,7 @@ tmux_plugins=(
   'tmux-plugins/tmux-sidebar'
   'tmux-plugins/tmux-urlview'
   'tmux-plugins/tmux-yank'
+  'tmux-plugins/tmux-prefix-highlight'
   'jaclu/tmux-menus'
   'xamut/tmux-weather'
   'schasse/tmux-jump'

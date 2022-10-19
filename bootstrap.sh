@@ -60,7 +60,7 @@ source $DOTFILES/repositories.sh
 source $DOTFILES/cheatsheets/cheatsheet_manager.sh
 
 # install crontabs
-source $DOTFILES/cronbtabs.sh
+source $DOTFILES/crontab.sh
 
 # chmods
 chmod a+x $DOTFILES/qutebrowser/.qutebrowser/userscripts/*
