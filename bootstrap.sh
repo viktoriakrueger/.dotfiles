@@ -75,6 +75,9 @@ Rscript $DOTFILES/R/dependencies.R
 # install python packages
 source $DOTFILES/pip.sh
 
+echo | pass spotify.com/spotify-tui  >> /Users/user/.config/spotify-tui/client.yml
+echo | pass spotify.com/spotifyd  >> /Users/user/.cache/spotifyd/credentials.json
+
 # make zsh default shell
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
   sudo sh -c "echo $(which zsh) >> /etc/shells"

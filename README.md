@@ -39,6 +39,10 @@ fi
 
 ## store `.gnupg` into `~/`
 
+```
+unzip ~/Downloads/gnupg.zip -d ~/Downloads/ && mv ~/Downloads/gnupg ~/.gnupg
+```
+
 ## run installation file
 
 `source ~/.dotfiles/bootstrap.sh`
