@@ -17,7 +17,8 @@ ___
 
 1. go to System Preferences
 2. Keyboard > Shortcuts > Spotlight > uncheck
-3. Services > map workflow to cmd + space
+3. doubleclick 'open_terminal.workflow'
+4. Services > map workflow to cmd + space
 ___
 
 ### screenrecord w/ audio
