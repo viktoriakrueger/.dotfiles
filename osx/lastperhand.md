@@ -33,4 +33,10 @@ ___
 
 ### posteo mail / carddav caldav
 
-posteo.de
+email address: ****@**.**
+
+user name: ******
+
+password: *****
+incoming mail server: posteo.de
+outgoing mail server: posteo.de
