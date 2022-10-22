@@ -68,3 +68,5 @@ tags
 
 # python
 __pycache__
+
+.log

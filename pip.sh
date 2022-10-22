@@ -17,12 +17,13 @@ pip3 install --user httplib2
 pip3 install --user youtube-dl
 pip3 install neovim
 pip3 install pynvim
+pip3 install breadability
+pip3 install readability
 
 # jupyter
 pip3 install JLDracula
 pip3 install qtconsole # pip3 install qtconsole pip3 install --user qtconsole
 pip3 install jupyter
-
 
 pip3 install matplotlib
 pip3 install sklearn

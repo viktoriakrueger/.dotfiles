@@ -113,7 +113,7 @@ synchro(){
 #####################################################
 
 # ZSH functions to start/stop OpenConnect VPN client
-function vpn-up() {
+function vpn-uk() {
  pass show uni-kassel.de/uk069555  | sudo openconnect  --user=uk069555 --passwd-on-stdin https://vpn.uni-kassel.de/ --servercert pin-sha256:cE1Loj4xAFctrQWe/4RdmIdvuIQqeIZrQ1zhkBgW6VM=
   }
 
@@ -281,6 +281,10 @@ rstudio(){
 
 mails(){
     /usr/bin/open -a Mail
+}
+
+amphetamine(){
+  /usr/bin/open -a Amphetamine
 }
 
 ######################################################################

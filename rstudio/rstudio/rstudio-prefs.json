@@ -4,7 +4,7 @@
     "posix_terminal_shell": "zsh",
     "jobs_tab_visibility": "shown",
     "show_margin": false,
-    "default_project_location": "~/",
+    "default_project_location": "~/repositories",
     "source_with_echo": true,
     "soft_wrap_r_files": true,
     "cran_mirror": {
@@ -21,5 +21,6 @@
     "rmd_viewer_type": "none",
     "global_theme": "alternate",
     "terminal_initial_directory": "home",
-    "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/thesisdown/rmarkdown/templates/thesis"
+    "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/thesisdown/rmarkdown/templates/thesis",
+    "show_hidden_files": true
 }
