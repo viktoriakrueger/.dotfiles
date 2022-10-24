@@ -114,7 +114,10 @@ synchro(){
 
 # ZSH functions to start/stop OpenConnect VPN client
 function vpn-uk() {
- pass show uni-kassel.de/uk069555  | sudo openconnect  --user=uk069555 --passwd-on-stdin https://vpn.uni-kassel.de/ --servercert pin-sha256:cE1Loj4xAFctrQWe/4RdmIdvuIQqeIZrQ1zhkBgW6VM=
+ pass .
+   if [[ "$?" -eq 0 ]]; then
+     pass show uni-kassel.de/uk069555  | sudo openconnect  --user=uk069555 --passwd-on-stdin https://vpn.uni-kassel.de/ --servercert pin-sha256:cE1Loj4xAFctrQWe/4RdmIdvuIQqeIZrQ1zhkBgW6VM=
+   fi
   }
 
 function vpn-down() {
@@ -124,6 +127,7 @@ function vpn-down() {
 # connect to the server
 connect(){
   osascript -e 'tell application "Finder" to open location "smb://smb.uni-kassel.de/vpvs"'
+  osascript -e 'delay 3' -e 'tell application "System Events" to keystroke tab & tab & return'
 }
 
 # disconnect

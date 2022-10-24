@@ -75,8 +75,10 @@ Rscript $DOTFILES/R/dependencies.R
 # install python packages
 source $DOTFILES/pip.sh
 
-echo | pass spotify.com/spotify-tui  >> /Users/user/.config/spotify-tui/client.yml
-echo | pass spotify.com/spotifyd  >> /Users/user/.cache/spotifyd/credentials.json
+echo | pass spotify.com/spotify-tui  >> ~/.config/spotify-tui/client.yml
+echo | pass spotify.com/spotifyd  >> ~/.cache/spotifyd/credentials.json
+
+cd ~/.config/nvim/pack/plugins/start/markdown-preview.nvim/ && npm i cjs-loader
 
 # make zsh default shell
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then

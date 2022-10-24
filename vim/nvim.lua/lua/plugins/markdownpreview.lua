@@ -34,7 +34,7 @@ vim.cmd("let g:mkdp_open_ip = ''")
 --valid: `/path/with\ space/xxx`
 --invalid: `/path/with\\ space/xxx`
 --default: ''
-vim.cmd("let g:mkdp_browser = ''")
+vim.cmd("let g:mkdp_browser = '/usr/local/bin/qutebrowser'")
 
 --set to 1, echo preview page url in command line when open preview page
 --default is 0

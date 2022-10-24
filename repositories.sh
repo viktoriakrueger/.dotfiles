@@ -5,11 +5,9 @@ git clone https://github.com/pandoc/lua-filters.git ~/.local/share/pandoc/filter
 
 # repos
 
-# markdown training
-git clone https://github.com/alexchaichan/markdown_training.git ~/repositories/markdown_training
+# data-science
 
-# R
-git clone https://github.com/alexchaichan/R.git ~/repositories/R
+git clone https://github.com/alexchaichan/data-science.git ~/repositories
 
 # template thesis
 git clone https://github.com/alexchaichan/forschungsberichte_und_empirische_abschlussarbeiten.git ~/repositories/forschungsberichte_und_empirische_abschlussarbeiten

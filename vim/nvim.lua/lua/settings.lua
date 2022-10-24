@@ -91,6 +91,11 @@ vim.cmd([[
   augroup END
 ]])
 
+-- minimap
+
+vim.cmd('let g:minimap_auto_start = 1')
+vim.cmd('let g:minimap_auto_start_win_enter = 1')
+
 -- colorscheme
 vim.cmd('set t_Co=256')
 vim.cmd('set termguicolors')

@@ -69,4 +69,9 @@ tags
 # python
 __pycache__
 
-.log
+
+*.log
+
+# R
+.Rdata
+.Rhistory
