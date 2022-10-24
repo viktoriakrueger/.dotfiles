@@ -75,6 +75,9 @@ Rscript $DOTFILES/R/dependencies.R
 # install python packages
 source $DOTFILES/pip.sh
 
+# install ruby gems
+source $DOTFILES/ruby/gems.sh
+
 echo | pass spotify.com/spotify-tui  >> ~/.config/spotify-tui/client.yml
 echo | pass spotify.com/spotifyd  >> ~/.cache/spotifyd/credentials.json
 

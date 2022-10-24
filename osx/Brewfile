@@ -71,6 +71,7 @@ brew "ranger"
 brew "reattach-to-user-namespace"
 brew "ripgrep"
 brew "ruby"
+brew "jruby"
 brew "sd"
 brew "spotify-tui"
 brew "spotifyd", restart_service: true
