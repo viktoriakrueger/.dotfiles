@@ -179,9 +179,6 @@ ln -sf $DOTFILES/neofetch/neofetch $CONFIG
 # xboard
 ln -sf $DOTFILES/xboard/.xboardrc $HOME
 
-# easy-csv
-ln -sf $DOTFILES/modern_csv/"Modern CSV" $CONFIG
-
 ########################################################
 # services                                             #
 ########################################################
