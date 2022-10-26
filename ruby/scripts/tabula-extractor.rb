@@ -1,7 +1,7 @@
 require 'tabula'
 
-pdf_file_path = "/Users/user/repositories/panel/Codebook_T22_9_Euro.pdf"
-outfilename = "whatever2.csv"
+pdf_file_path = "/Users/user/.pdf"
+outfilename = ".csv"
 
 out = open(outfilename, 'w')
 
