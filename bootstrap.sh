@@ -20,7 +20,7 @@ esac
 export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export DOTFILES=$HOME/.dotfiles
 export DROPBOX=$HOME/Dropbox
-export ZDOTDIR=$HOME/.plugins_zsh
+export ZDOTDIR=$HOME/.zsh
 export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
 export CONFIG=$HOME/.config
@@ -68,20 +68,22 @@ source $DOTFILES/crontab.sh
 #chmod +x ~/.dotfiles/calcurse/.calcurse/hooks/post-save
 #chmod a+x $DOTFILES/tmux/tmux/tmux-cheatsheets.sh
 
-# configure R
+# R
 Rscript $DOTFILES/R/package_manager.R
 Rscript $DOTFILES/R/dependencies.R
 
-# install python packages
+# python
 source $DOTFILES/pip.sh
 
-# install ruby gems
+# ruby
 source $DOTFILES/ruby/gems.sh
 
+# java
+source $DOTFILES/java/javascript/npm.sh
+
+# passwords
 echo | pass spotify.com/spotify-tui  >> ~/.config/spotify-tui/client.yml
 echo | pass spotify.com/spotifyd  >> ~/.cache/spotifyd/credentials.json
-
-cd ~/.config/nvim/pack/plugins/start/markdown-preview.nvim/ && npm i cjs-loader
 
 # make zsh default shell
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
