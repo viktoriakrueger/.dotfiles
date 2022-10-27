@@ -34,4 +34,4 @@ Verbose = Yes
 # not want to use authentication.
 [Auth]
 Username = aleksej.chaichan@posteo.de
-Password = CALCURSE_CALDAV_PASSWORD=$(pass show calcurse/posteopassword) calcurse-caldav
+Password = CALCURSE_CALDAV_PASSWORD=$(pass show posteo.de/aleksej.chaichan@posteo.de) calcurse-caldav
