@@ -18,3 +18,8 @@ git remote -v
 # push the changes in your local repository to GitHub. # master or origin
 git push origin master
 
+___
+
+git push -f origin main
+
+git rebase --continue

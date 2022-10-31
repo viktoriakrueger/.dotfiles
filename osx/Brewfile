@@ -48,6 +48,7 @@ brew "jupyterlab", link: false
 brew "khard"
 brew "lazygit"
 brew "libnotify"
+brew "lua-language-server"
 brew "mas"
 brew "ninja"
 brew "meson"
