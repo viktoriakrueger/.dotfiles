@@ -275,6 +275,14 @@ amphetamine(){
   /usr/bin/open -a Amphetamine
 }
 
+wifi(){
+  /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
+}
+
+wifi-connect(){
+  networksetup -setairportnetwork en0 $1 $2
+}
+
 ######################################################################
 fi
 

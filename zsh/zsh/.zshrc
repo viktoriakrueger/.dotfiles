@@ -79,6 +79,12 @@ precmd() { print "" }
 # vi keybinding
 bindkey -v
 
+# zsh history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if [[ "$os" == "linux" ]]; then
