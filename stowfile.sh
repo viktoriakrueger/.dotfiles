@@ -20,6 +20,7 @@ ln -sf $DOTFILES/cheatsheets/* $HOME/cheatsheets ; rm $HOME/cheatsheets/*.sh
 # zsh
 mkdir $ZDOTDIR
 ln -sf $DOTFILES/zsh/zsh/.zshrc $HOME/
+touch $ZDOTDIR/.zsh_history
 
 # bash
 ln -sf $DOTFILES/bash/bash/.bashrc $HOME/
