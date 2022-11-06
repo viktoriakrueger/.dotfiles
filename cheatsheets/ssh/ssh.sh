@@ -47,4 +47,6 @@ scp ~/.ssh/id_rsa.pub/ username@ip_address:~/
 # save key to authorized keys
 cat ~/id_rsa-pub >> .ssh/authorized_keys
 
+# open windows on target machine
+export DISPLAY=:0
 
