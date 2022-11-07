@@ -31,8 +31,13 @@ export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
 export CONFIG=$HOME/.config
 
-#export PATH=/opt/homebrew/bin:$PATH
+# export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/bin:$PATH
+
+# export nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # default editor
 export EDITOR=nvim
@@ -113,7 +118,3 @@ elif [[ "$os" == "osx" ]]; then
 
 fi
 # <<< conda initialize <<<
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
