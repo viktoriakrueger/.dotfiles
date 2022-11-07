@@ -59,13 +59,8 @@ hex(){
     xxd -psd
 }
 
-# check weather in stadard location
-weather(){
-    curl v2d.wttr.in/Kassel
-}
-
 # check weather in $1 location
-wetter(){
+weather(){
     curl v2d.wttr.in/$1
 }
 
