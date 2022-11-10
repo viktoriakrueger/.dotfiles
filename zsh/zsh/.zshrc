@@ -34,6 +34,12 @@ export CONFIG=$HOME/.config
 # export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
+#If you need to have openjdk first in your PATH, run:
+#export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+#For compilers to find openjdk you may need to set:
+#export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+
 # export nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

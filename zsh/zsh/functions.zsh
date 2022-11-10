@@ -110,7 +110,7 @@ function vpn-down() {
 # connect to the server
 connect(){
   osascript -e 'tell application "Finder" to open location "smb://smb.uni-kassel.de/vpvs"'
-  osascript -e 'delay 3' -e 'tell application "System Events" to keystroke tab & tab & return'
+  osascript -e 'delay 3' -e 'tell application "System Events" to keystroke tab & return & return'
 }
 
 # disconnect

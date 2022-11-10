@@ -765,7 +765,7 @@ cursor:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 #
-# hotkeys shortcuts shortkeys short keys hot keys
+# hotkeys shortcuts shortkeys short keys hot keys keybindings
 
 key_bindings:
   - { key: D, mods: Command, chars: "\x06\x76"  }
@@ -788,6 +788,11 @@ key_bindings:
     #- { key: Key8,     mods: Alt,        chars: "\x7b"                     }
     #- { key: Key9,     mods: Alt,        chars: "\x7d"                     }
     #- { key: L,        mods: Alt,        chars: "\x40"                     }
+
+  # unbind fkeys
+  # - { key: F7,   action: None             }
+  # - { key: F8,  action: None             }
+  # - { key: F9, action: None             }
 
   - { key: 28,      mods: Alt, chars: "{" }
   - { key: 25,      mods: Alt, chars: "}" }
@@ -816,9 +821,6 @@ key_bindings:
   - { key: Left,     mods: Control, chars: "\x06\x70"                      }
   - { key: Right,    mods: Control, chars: "\x06\x6e"                       }
 
-# vpn-up uni kassel
-  - { key: I ,    mods: Command, chars: "\x76\x70\x6e\x2d\x75\x70\x0a\x75\x28\x6e\x69\x6b\x61\x73\x73\x65\x28\x6d\x34\x79\x6a\x7a\x33\x31\x64\x51\x29\x6c\x29\x0a"                       }
-
 # open qutebrowser workaround
   - { key: E,    mods: Command, chars: "\x63\x6c\x65\x61\x72\x0a\x62\x61\x74\x20\x7e\x2f\x75\x72\x6c\x73\x0a"                       }
 
@@ -831,8 +833,7 @@ key_bindings:
   - { key: R,    mods: Command, chars: "\x52\x0a"                       }
 
 # open jupyter-lab cmd+J
-  - { key: J,    mods: Command, chars: "\x6a\x75\x70\x79\x74\x65\x72\x2d\x6c\x61\x62\x0a"
-}
+  - { key: J,    mods: Command, chars: "\x6a\x75\x70\x79\x74\x65\x72\x2d\x6c\x61\x62\x0a"}
 
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }

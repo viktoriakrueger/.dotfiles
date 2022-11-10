@@ -4,7 +4,7 @@
     "posix_terminal_shell": "zsh",
     "jobs_tab_visibility": "shown",
     "show_margin": false,
-    "default_project_location": "~/repositories/test",
+    "default_project_location": "~/repositories",
     "source_with_echo": true,
     "soft_wrap_r_files": true,
     "cran_mirror": {
