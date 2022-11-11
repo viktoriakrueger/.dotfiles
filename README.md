@@ -52,7 +52,7 @@ unzip ~/Downloads/gnupg.zip -d ~/Downloads/ && mv ~/Downloads/gnupg ~/.gnupg
 
 **clear `~/Downloads`**
 
-`rm gnupg.zip .password-store-main.zip`
+`rm ~/Downloads/gnupg.zip ~/Downloads/.password-store-main.zip`
 
 ## run installation file
 
