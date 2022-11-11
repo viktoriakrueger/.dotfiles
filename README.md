@@ -32,18 +32,23 @@ elif [[ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ]]; then
 fi
 ```
 
-# clone `.dotfiles` & `.password-store`
-`git clone https://github.com/alexchaichan/.dotfiles.git ~/.dotfiles`
+## clone `.dotfiles`
 
-`git clone https://github.com/alexchaichan/.password-store.git ~/.password-store`
+`git clone https://github.com/alexchaichan/.dotfiles.git ~/.dotfiles`
 
 ## store [`.password-store`](https://github.com/alexchaichan/.password-store/archive/refs/heads/main.zip) into `~/`
 
-## store `.gnupg` into `~/`
+`unzip ~/Downloads/.password-store-main.zip -d ~/Downloads && mv ~/Downloads/.password-store-main ~/.password-store/`
+
+## store `[.gnupg](https://drive.proton.me/urls/1K1QVY03ZC#8nRtoDHTIi6J)` into `~/`
 
 ```
 unzip ~/Downloads/gnupg.zip -d ~/Downloads/ && mv ~/Downloads/gnupg ~/.gnupg
 ```
+
+## clone `.password-store`into `~/`
+
+`git clone https://github.com/alexchaichan/.password-store.git ~/Downloads/.password-store && rm -r ~/.password-store && mv ~/Downloads/.password-store-main ~/.password-store`
 
 ## run installation file
 
