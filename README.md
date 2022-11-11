@@ -37,6 +37,8 @@ fi
 
 `git clone https://github.com/alexchaichan/.password-store.git ~/.password-store`
 
+## store [`.password-store`](https://github.com/alexchaichan/.password-store/archive/refs/heads/main.zip) into `~/`
+
 ## store `.gnupg` into `~/`
 
 ```
