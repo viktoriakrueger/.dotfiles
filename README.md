@@ -40,7 +40,7 @@ fi
 
 `unzip ~/Downloads/.password-store-main.zip -d ~/Downloads && mv ~/Downloads/.password-store-main ~/.password-store/`
 
-## store `[.gnupg](https://drive.proton.me/urls/1K1QVY03ZC#8nRtoDHTIi6J)` into `~/`
+## store [`.gnupg`](https://drive.proton.me/urls/1K1QVY03ZC#8nRtoDHTIi6J) into `~/`
 
 ```
 unzip ~/Downloads/gnupg.zip -d ~/Downloads/ && mv ~/Downloads/gnupg ~/.gnupg
