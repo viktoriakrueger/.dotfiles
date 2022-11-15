@@ -31,10 +31,10 @@ if [[ "$os" == "osx" ]]; then
 fi
 
 # create symlinks from .dotfiles repo
-source $DOTFILES/stowfile.sh
+source $DOTFILES/bootstrap/stowfile.sh
 
 # install plugins for zsh / neovim / tmux
-source $DOTFILES/plugins.sh
+source $DOTFILES/bootstrap/plugins.sh
 
 # install Brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
@@ -54,26 +54,20 @@ if [[ "$os" == "osx" ]]; then
 fi
 
 # install repositores
-source $DOTFILES/repositories.sh
+source $DOTFILES/bootstrap/repositories.sh
 
 # download cheatsheet
 source $DOTFILES/cheatsheets/cheatsheet_manager.sh
 
 # install crontabs
-source $DOTFILES/crontab.sh
-
-# chmods
-#chmod a+x $DOTFILES/qutebrowser/.qutebrowser/userscripts/*
-#chmod +x ~/.dotfiles/calcurse/.calcurse/hooks/pre-load
-#chmod +x ~/.dotfiles/calcurse/.calcurse/hooks/post-save
-#chmod a+x $DOTFILES/tmux/tmux/tmux-cheatsheets.sh
+source $DOTFILES/bootstrap/crontab.sh
 
 # R
 Rscript $DOTFILES/R/package_manager.R
 Rscript $DOTFILES/R/dependencies.R
 
 # python
-source $DOTFILES/pip.sh
+source $DOTFILES/pip/pip.sh
 
 # ruby
 source $DOTFILES/ruby/gems.sh
