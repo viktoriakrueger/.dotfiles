@@ -1,4 +1,7 @@
-local gitsigns = require("gitsigns")
+local status_ok, gitsigns = pcall(require, "gitsigns")
+if not status_ok then
+  return
+end
 
 gitsigns.setup {
   signs = {
@@ -33,7 +36,7 @@ gitsigns.setup {
   max_file_length = 40000,
   preview_config = {
     -- Options passed to nvim_open_win
-    border = "single",
+    border = "rounded",
     style = "minimal",
     relative = "cursor",
     row = 0,

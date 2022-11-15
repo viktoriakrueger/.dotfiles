@@ -1,4 +1,7 @@
-local bufferline = require("bufferline")
+local status_ok, bufferline = pcall(require, "bufferline")
+if not status_ok then
+  return
+end
 
 bufferline.setup {
   options = {
@@ -82,7 +85,7 @@ bufferline.setup {
     -- buffer_selected = {
     --   fg = {attribute='fg',highlight='#ff0000'},
     --   bg = {attribute='bg',highlight='#0000ff'},
-    --   gui = 'none'
+    --   sp = 'none'
     --   },
     buffer_visible = {
       fg = { attribute = "fg", highlight = "TabLine" },

@@ -38,9 +38,11 @@ vim_plugins=(
  'ncm2/ncm2-jedi'
  'kevinhwang91/rnvimr'
  'dracula/vim'
+ 'tzachar/cmp-tabnine'
  'iamcco/markdown-preview.nvim'
  'ThePrimeagen/harpoon'
  'easymotion/vim-easymotion'
  'dhruvasagar/vim-table-mode'
  'wfxr/minimap.vim'
+ 'lvimuser/lsp-inlayhints.nvim'
 )

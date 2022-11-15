@@ -94,8 +94,8 @@ vim.cmd([[
 
 -- minimap
 
-vim.cmd('let g:minimap_auto_start = 1')
-vim.cmd('let g:minimap_auto_start_win_enter = 1')
+vim.cmd('let g:minimap_auto_start = 0')
+vim.cmd('let g:minimap_auto_start_win_enter = 0')
 
 -- colorscheme
 vim.cmd('set t_Co=256')
