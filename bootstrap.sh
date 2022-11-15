@@ -60,6 +60,9 @@ source $DOTFILES/bootstrap/repositories.sh
 source $DOTFILES/cheatsheets/cheatsheet_manager.sh
 
 # install crontabs
+if [[ "$os" == "linux" ]]; then
+  systemctl enable --now cronie.service
+fi
 source $DOTFILES/bootstrap/crontab.sh
 
 # R
@@ -67,7 +70,7 @@ Rscript $DOTFILES/R/package_manager.R
 Rscript $DOTFILES/R/dependencies.R
 
 # python
-source $DOTFILES/pip/pip.sh
+source $DOTFILES/python/pip/pip.sh
 
 # ruby
 source $DOTFILES/ruby/gems.sh

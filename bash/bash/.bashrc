@@ -21,9 +21,6 @@ case "${unameOut}" in
 esac
 
 if [[ "$os" == "linux" ]]; then
-  # echo 'MOUSE ON!!!'
-  # bluetoothctl connect 04:4B:ED:D2:45:CF
-  pkill spotifyd
   if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx
   fi

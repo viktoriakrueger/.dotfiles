@@ -6,8 +6,4 @@ git clone https://github.com/pandoc/lua-filters.git ~/.local/share/pandoc/filter
 # repos
 
 # data-science
-
 git clone https://github.com/alexchaichan/data-science.git ~/repositories
-
-# template thesis
-git clone https://github.com/alexchaichan/forschungsberichte_und_empirische_abschlussarbeiten.git ~/repositories/forschungsberichte_und_empirische_abschlussarbeiten
