@@ -3,15 +3,14 @@
 # thanks to Mathias Bynens!
 # ~/.macos — https://mths.be/macos
 
-# close any open system preferences panes, to prevent them from overriding
-# settings we’re about to change
+# close any open system preferences panes, to prevent them from overriding settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
 ###############################################################################
 # general UI/UX                                                               #
 ###############################################################################
 
-# # set computer name (as done via System Preferences → Sharing)
+# set computer name (as done via System Preferences → Sharing)
 # scutil --set ComputerName "usersmacbook"
 # scutil --set HostName "user"
 # scutil --set LocalHostName "user"

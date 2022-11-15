@@ -4,7 +4,7 @@ snippet read
 	}
 
 snippet setup
-	knitr::opts_chunk$set(
+	knitr::opts_chunk\$set(
 	echo = TRUE,
 	message = FALSE,
 	warning = FALSE
@@ -13,7 +13,7 @@ snippet setup
 	options("scipen" = 100, "digits" = 4)
 
 	if (rstudioapi::isAvailable() == TRUE) {
-		path <- rstudioapi::getActiveDocumentContext()$path
+		path <- rstudioapi::getActiveDocumentContext()\$path
 		Encoding(path) <- "UTF-8"
 		setwd(dirname(path))
 		

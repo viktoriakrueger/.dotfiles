@@ -274,7 +274,7 @@ amphetamine(){
   /usr/bin/open -a Amphetamine
 }
 
-wifi(){
+wifi-search(){
   /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
 }
 
