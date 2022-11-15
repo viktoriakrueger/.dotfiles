@@ -45,6 +45,8 @@ require "plugins.lsp.lspsaga"
 --require("plugins.lsp.mason")
 require("plugins.lsp.handlers").setup()
 require "plugins.lsp.null-ls"
+require'lspconfig'.pyright.setup{}
+
 
 local l_status_ok, lsp_lines = pcall(require, "lsp_lines")
 if not l_status_ok then
