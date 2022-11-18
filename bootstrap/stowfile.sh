@@ -180,6 +180,9 @@ ln -sf $DOTFILES/neofetch/neofetch $CONFIG
 # xboard
 ln -sf $DOTFILES/xboard/.xboardrc $HOME
 
+# vscode
+source $DOTFILES/vscode/extensions.sh
+
 ########################################################
 # services                                             #
 ########################################################
