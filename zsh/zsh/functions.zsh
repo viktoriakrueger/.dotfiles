@@ -54,6 +54,20 @@ l(){
     ls -a --color=auto $1
 }
 
+ll(){
+    ls -alF --color=auto $1
+}
+
+# .. back to home
+.(){
+    cd $1
+}
+
+# .. back
+..(){
+    cd ..
+}
+
 # get easy keyboard hex codes
 hex(){
     xxd -psd
