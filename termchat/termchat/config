@@ -1,6 +1,6 @@
 discovery_addr = "238.255.0.1:5877"
 tcp_server_port = 0
-user_name = "my_awesome_user_name"
+user_name = "alex"
 terminal_bell = true
 
 [theme]
