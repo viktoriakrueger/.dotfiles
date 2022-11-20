@@ -181,7 +181,10 @@ ln -sf $DOTFILES/neofetch/neofetch $CONFIG
 ln -sf $DOTFILES/xboard/.xboardrc $HOME
 
 # vscode
-source $DOTFILES/vscode/extensions.sh
+# source $DOTFILES/vscode/extensions.sh
+
+# termchat
+ln -sf $DOTFILES/termchat/termchat $HOME/.config
 
 ########################################################
 # services                                             #

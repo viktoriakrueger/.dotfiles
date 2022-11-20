@@ -31,6 +31,7 @@ export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
 export CONFIG=$HOME/.config
 
+export PATH=$HOME/.cargo/bin:$PATH
 # export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/bin:$PATH
 

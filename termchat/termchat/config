@@ -1,0 +1,16 @@
+discovery_addr = "238.255.0.1:5877"
+tcp_server_port = 0
+user_name = "my_awesome_user_name"
+terminal_bell = true
+
+[theme]
+message_colors = ["Blue", "Yellow", "Cyan", "Magenta"]
+my_user_color = "Green"
+date_color = "DarkGray"
+system_info_color = ["Cyan", "LightCyan"]
+system_warning_color = ["Yellow", "LightYellow"]
+system_error_color = ["Red", "LightRed"]
+chat_panel_color = "White"
+progress_bar_color = "LightGreen"
+command_color = "LightYellow"
+input_panel_color = "White"
