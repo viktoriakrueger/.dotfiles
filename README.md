@@ -56,7 +56,7 @@ unzip ~/Downloads/gnupg.zip -d ~/Downloads/ && mv ~/Downloads/gnupg ~/.gnupg
 
 ## run installation file
 
-`cd ~/.dotfiles ./bootstrap.sh`
+`cd ~/.dotfiles && ./bootstrap.sh`
 
 <!-- ## calcurse config -->
 <!---->
