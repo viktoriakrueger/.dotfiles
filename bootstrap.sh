@@ -6,6 +6,12 @@ sudo -v
 # keep-alive: update existing `sudo` time stamp until `bootstap.sh` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# replace ~/.password-store with the git repository
+git clone https://github.com/alexchaichan/.password-store.git ~/Downloads/.password-store && rm -r ~/.password-store && mv ~/Downloads/.password-store ~/.password-store
+
+# clear ~/Downloads
+rm ~/Downloads/gnupg.zip ~/Downloads/.password-store-main.zip
+
 # check for os type
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -41,11 +47,6 @@ if [[ "$os" == "osx" ]]; then
 	brew bundle --file=$DOTFILES/osx/Brewfile
 elif [[ "$os" == "linux" ]]; then
 	pacman -S --needed - < $DOTFILES/arch/pacman/Pacmanfile
-fi
-
-# zathura
-if [[ "$os" == "osx" ]]; then
-  source ~/.dotfiles/zathura/installer.sh
 fi
 
 # install applications

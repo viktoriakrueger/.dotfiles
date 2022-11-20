@@ -46,14 +46,6 @@ fi
 unzip ~/Downloads/gnupg.zip -d ~/Downloads/ && mv ~/Downloads/gnupg ~/.gnupg
 ```
 
-## clone `.password-store` into `~/`
-
-`git clone https://github.com/alexchaichan/.password-store.git ~/Downloads/.password-store && rm -r ~/.password-store && mv ~/Downloads/.password-store ~/.password-store`
-
-**clear `~/Downloads`**
-
-`rm ~/Downloads/gnupg.zip ~/Downloads/.password-store-main.zip`
-
 ## run installation file
 
 `cd ~/.dotfiles && ./bootstrap.sh`

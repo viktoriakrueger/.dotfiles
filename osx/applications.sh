@@ -24,15 +24,7 @@ hdiutil attach Amphetamine\ Enhancer.dmg
 cp -R /Volumes/Amphetamine\ Enhancer/Amphetamine\ Enhancer.app /Applications
 rm Amphetamine\ Enhancer.dmg
 
-# displaylinks
-cd ~/
-wget "https://www.synaptics.com/sites/default/files/exe_files/2022-07/DisplayLink Manager Graphics Connectivity1.7.1-EXE.pkg"
-sudo installer -pkg ~/DisplayLink\ Manager\ Graphics\ Connectivity1.7.1-EXE.pkg -target /Applications
-cd ~/
-rm DisplayLink\ Manager\ Graphics\ Connectivity1.7.1-EXE.pkg
-
 # zathura
-
 brew tap zegervdv/zathura
 
 brew install zathura
@@ -52,4 +44,3 @@ brew install zathura --HEAD
 
 mkdir -p $(brew --prefix zathura)/lib/zathura
 ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
-
