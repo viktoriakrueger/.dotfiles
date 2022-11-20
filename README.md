@@ -56,7 +56,7 @@ unzip ~/Downloads/gnupg.zip -d ~/Downloads/ && mv ~/Downloads/gnupg ~/.gnupg
 
 ## run installation file
 
-`cd ~/.dotfiles ./dotfiles/bootstrap.sh`
+`cd ~/.dotfiles ./bootstrap.sh`
 
 <!-- ## calcurse config -->
 <!---->
@@ -65,10 +65,6 @@ unzip ~/Downloads/gnupg.zip -d ~/Downloads/ && mv ~/Downloads/gnupg ~/.gnupg
 <!---->
 <!-- ln -sf ~/Dropbox/iphone/todo ~/.calcurse -->
 <!-- ``` -->
-
-<!-- ### run light version -->
-<!---->
-<!-- `source ~/.dotfiles/light.sh` -->
 
 ### cygwin
 
