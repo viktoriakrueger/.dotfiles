@@ -78,6 +78,9 @@ source $DOTFILES/ruby/gems.sh
 # java
 source $DOTFILES/java/javascript/npm.sh
 
+# rust
+source $DOTFILES/rust/packages.sh
+
 # passwords
 echo | pass spotify.com/spotify-tui  >> ~/.config/spotify-tui/client.yml
 echo | pass spotify.com/spotifyd  >> ~/.cache/spotifyd/credentials.json
