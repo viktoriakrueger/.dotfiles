@@ -115,6 +115,7 @@ cask "steam"
 cask "sublime-text"
 cask "vlc"
 cask "visual-studio-code"
+cask "virtualbox"
 cask "xquartz"
 cask "zoom"
 mas "Amphetamine", id: 937984704

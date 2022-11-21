@@ -46,7 +46,7 @@ source $DOTFILES/bootstrap/plugins.sh
 if [[ "$os" == "osx" ]]; then
 	brew bundle --file=$DOTFILES/osx/Brewfile
 elif [[ "$os" == "linux" ]]; then
-	pacman -S --needed - < $DOTFILES/arch/pacman/Pacmanfile
+	pacman -S --needed - < $DOTFILES/linux/arch_linux/pacman/Pacmanfile
 fi
 
 # install applications

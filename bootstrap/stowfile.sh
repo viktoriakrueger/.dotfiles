@@ -104,7 +104,7 @@ fi
 
 # xinitrc
 if [[ "$os" == "linux" ]]; then
-	ln -sf $DOTFILES/arch/.xinitrc $HOME/
+	ln -sf $DOTFILES/linux/arch_linux/.xinitrc $HOME/
 fi
 
 # pacman.conf
