@@ -161,6 +161,9 @@ mkdir $HOME/.newsboat ; ln -sf $DOTFILES/newsboat/.newsboat/* $HOME/.newsboat
 # w3m
 mkdir $HOME/.w3m ; ln -sf $DOTFILES/w3m/.w3m/* $HOME/.w3m
 
+# starship
+ln -sf $DOTFILES/zsh/starship/starship.toml $CONFIG
+
 # jupyter
 mkdir $HOME/.jupyter ; mkdir $HOME/.jupyter/lab ; ln -sf $DOTFILES/jupyter/.jupyter/jupyter_qtconsole_config.py $HOME/.jupyter ; ln -sf $DOTFILES/jupyter/.jupyter/qtdracula.css $HOME/.jupyter ; ln -sf $DOTFILES/jupyter/.jupyter/lab/user-settings $HOME/.jupyter/lab
 

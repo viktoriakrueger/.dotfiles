@@ -66,6 +66,7 @@ elif [[ "$os" == "linux" ]]; then
 	#source /usr/local/fzf/0.30.0/shell/key-bindings.zsh
 fi
 
+# eval "$(starship init zsh)"
 source $HOME/.dotfiles/zsh/zsh/.p10k.zsh
 source $HOME/.dotfiles/zsh/zsh/functions.zsh
 
@@ -77,7 +78,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
-[[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
+# [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
 
 # setup a custom completion directory
 fpath=($ZDOTDIR/zsh-completions/src $fpath)
