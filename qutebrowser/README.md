@@ -4,4 +4,4 @@
 
 I use qutebrowser as main main webbrowser.
 
-I higly recommend [pass](https://www.passwordstore.org/) password manager which can be integrated into qutebrowser with a userscript [qute-pass](.qutebrowser/userscript/qute-pass)
+I higly recommend [pass](https://www.passwordstore.org/) password manager which can be integrated into qutebrowser with a userscript [qute-pass](.qutebrowser/userscripts/qute-pass)
