@@ -49,13 +49,16 @@ passwort(){
     pass | bat
 }
 
+# ls darcula
+alias ls="colorls --dark"
+
 # ls wit flags
 l(){
     ls -a --color=auto $1
 }
 
 ll(){
-    ls -alF --color=auto $1
+    ls -al $1
 }
 
 # .. back to home

@@ -237,8 +237,7 @@ c.aliases = {
 # autoplay when opening
 c.content.autoplay = False
 
-#### ad block
-
+# ad block
 c.content.blocking.adblock.lists = [ \
  "https://easylist.to/easylist/easylist.txt", \
  "https://easylist.to/easylist/easyprivacy.txt", \
@@ -258,7 +257,7 @@ c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack
 c.content.blocking.method = 'both'
 
 ################################################################################
-# keybindings #
+# keybindings                                                                  #
 ################################################################################
 
 # keybinding view videos with mpv

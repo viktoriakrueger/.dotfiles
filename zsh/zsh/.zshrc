@@ -61,6 +61,7 @@ source $ZDOTDIR/zsh-autopair/autopair.zsh
 # functions
 source $DOTFILES/zsh/zsh/functions.zsh
 
+# fzf
 if [[ "$os" == "osx" ]]; then
   source /usr/local/Cellar/fzf/*/shell/completion.zsh
 	source /usr/local/Cellar/fzf/*/shell/key-bindings.zsh
@@ -68,6 +69,8 @@ elif [[ "$os" == "linux" ]]; then
 	#source /usr/local/fzf/0.30.0/shell/completion.zsh
 	#source /usr/local/fzf/0.30.0/shell/key-bindings.zsh
 fi
+# fzf dracula theme
+export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 
 # powerlevel10k
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
