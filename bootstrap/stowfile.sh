@@ -175,7 +175,7 @@ ln -sf $DOTFILES/Templates $HOME/
 
 #tops
 ln -sf $DOTFILES/tops/htop/ $CONFIG
-ln -sf $DOTFILES/tops/btop/ $CONFIG
+mkdir $CONFIG/btop; ln -sf $DOTFILES/tops/btop/btop.conf $CONFIG/btop
 
 # mpv
 ln -sf $DOTFILES/mpv/mpv $CONFIG
