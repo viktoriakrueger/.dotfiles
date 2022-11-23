@@ -173,9 +173,8 @@ mkdir $HOME/.jupyter ; mkdir $HOME/.jupyter/lab ; ln -sf $DOTFILES/jupyter/.jupy
 # templates
 ln -sf $DOTFILES/Templates $HOME/
 
-#tops
-ln -sf $DOTFILES/tops/htop/ $CONFIG
-mkdir $CONFIG/btop; ln -sf $DOTFILES/tops/btop/btop.conf $CONFIG/btop
+#btop
+mkdir $CONFIG/btop; ln -sf $DOTFILES/btop/btop/btop.conf $CONFIG/btop
 
 # mpv
 ln -sf $DOTFILES/mpv/mpv $CONFIG
