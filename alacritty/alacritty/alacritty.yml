@@ -805,21 +805,23 @@ key_bindings:
 
   - { key: Q,      mods: Alt, chars: "@" }
 
-  - { key: Left,     mods: Command, chars: "\x06\x1b\x5b\x44"                      }
-  - { key: Right,    mods: Command, chars: "\x06\x1b\x5b\x43"                       }
-  - { key: Up,    mods: Command, chars: "\x06\x1b\x5b\x41"                       }
-  - { key: Down,    mods: Command, chars: "\x06\x1b\x5b\x42"                       }
+  - { key: Left,     mods: Command, chars: "\x06\x1b\x5b\x44"                     }
+  - { key: Right,    mods: Command, chars: "\x06\x1b\x5b\x43"                     }
+  - { key: Up,    mods: Command, chars: "\x06\x1b\x5b\x41"                        }
+  - { key: Down,    mods: Command, chars: "\x06\x1b\x5b\x42"                      }
 
-  - { key: H,     mods: Command, chars: "\x06\x1b\x5b\x44"                      }
-  - { key: L,    mods: Command, chars: "\x06\x1b\x5b\x43"                       }
-  - { key: K,    mods: Command, chars: "\x06\x1b\x5b\x41"                       }
-  - { key: J,    mods: Command, chars: "\x06\x1b\x5b\x42"                       }
+  - { key: L,   mods: Alt,  action: None             }
+
+  - { key: H,    mods: Alt, chars: "\x06\x1b\x5b\x44"                       }
+  - { key: L,    mods: Alt, chars: "\x06\x1b\x5b\x43"                       }
+  - { key: K,    mods: Alt, chars: "\x06\x1b\x5b\x41"                       }
+  - { key: J,    mods: Alt, chars: "\x06\x1b\x5b\x42"                       }
 
 # open url_view (tmx-plugin mac os only)
   - { key: U,    mods: Command, chars: "\x06\x75"                       }
 
-  - { key: Left,     mods: Control, chars: "\x06\x70"                      }
-  - { key: Right,    mods: Control, chars: "\x06\x6e"                       }
+  - { key: Left,     mods: Control, chars: "\x06\x70"                   }
+  - { key: Right,    mods: Control, chars: "\x06\x6e"                   }
 
 # open qutebrowser workaround
   - { key: E,    mods: Command, chars: "\x63\x6c\x65\x61\x72\x0a\x62\x61\x74\x20\x7e\x2f\x75\x72\x6c\x73\x0a"                       }
@@ -828,12 +830,6 @@ key_bindings:
   - { key: Key1,    mods: Alt, chars: "\x06\x75\x0a\x0a\x71"                       }
   - { key: Key2,    mods: Alt, chars: "\x06\x75\x32\x0a\x0a\x0a\x71"                      }
   - { key: Key3,    mods: Alt, chars: "\x06\x75\x33\x0a\x0a\x0a\x71"                      }
-
-# open  R with cmd+R
-  - { key: R,    mods: Command, chars: "\x52\x0a"                       }
-
-# open jupyter-lab cmd+J
-  - { key: J,    mods: Command, chars: "\x6a\x75\x70\x79\x74\x65\x72\x2d\x6c\x61\x62\x0a"}
 
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
