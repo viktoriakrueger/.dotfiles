@@ -7,7 +7,6 @@ cd qutebrowser
 python3 scripts/mkvenv.py
 cd ~/
 rm -rf qutebrowser
-# password manager script for pass x qutebrowser
 
 # qutebrowser (application)
 cd ~/
