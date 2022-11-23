@@ -166,7 +166,11 @@ function PlugUpdate(){
 #####################################################
 
 applemouse(){
-  blueutil -p 1 && blueutil --connect 04-4b-ed-d2-45-cf
+  blueutil -p 1 && blueutil --connect $(pass bluetooth/applemouse)
+}
+
+jbl-box(){
+  blueutil -p 1 && blueutil --connect $(pass bluetooth/jbl-box)
 }
 
 if [[ "$os" == "osx" ]]; then
