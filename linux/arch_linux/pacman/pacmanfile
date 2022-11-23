@@ -3,7 +3,7 @@ neovim
 ranger
 feh
 zathura
-htop
+btop
 khal
 lazygit
 khard
@@ -41,5 +41,4 @@ vdirsyncer
 xboard
 zathura-pdf-poppler
 youtube-dl
-pass-git-helper
 cronie
