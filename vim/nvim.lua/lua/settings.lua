@@ -1,6 +1,4 @@
 HOME = os.getenv("HOME")
--- set language
---vim.api.nvim_exec ('language en_US', true) --dosent work on arch linux
 
 -- basic settings
 vim.o.encoding = "utf-8"
@@ -93,7 +91,6 @@ vim.cmd([[
 ]])
 
 -- minimap
-
 vim.cmd('let g:minimap_auto_start = 0')
 vim.cmd('let g:minimap_auto_start_win_enter = 0')
 
@@ -113,4 +110,3 @@ vim.cmd('call nvim_create_user_command(\'PlugUpdate\', \'! cd $VDOTDIR/pack/plug
 
 -- render function for .rmd
 vim.cmd('call nvim_create_user_command(\'Render\', \'! R -e \"rmarkdown::render(\\"`realpath %`\\")\" && FILE=\"`realpath %`\" && tmux neww zathura ${FILE/rmd/pdf} && tmux last-window \', {})')
-

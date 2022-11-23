@@ -107,7 +107,6 @@ keymap("i", "µ", "%>%", opts)
 -----------------------------------------------------------------------
 -- functions -
 -----------------------------------------------------------------------
-
 keymap("", "<C-l>", "<Nop>", opts) -- unmap first
 keymap("", "<C-l>", ":Render<CR>", opts) -- quit with ctrl+q
 
@@ -126,7 +125,6 @@ keymap("n", "<leader>t", ":Telescope find_files<CR>", opts)
 -----------------------------------------------------------------------
 -- harpoon -
 -----------------------------------------------------------------------
-
 keymap("n", "<leader>H", ":lua require(\"harpoon.mark\").add_file()<cr>", opts)
 keymap("n", "<leader>h", ":lua require(\"harpoon.ui\").toggle_quick_menu()<cr>", opts)
 keymap("n", "<leader>g", ":lua require(\"harpoon.ui\").nav_next()<cr>", opts)
@@ -135,5 +133,4 @@ keymap("n", "<leader>G", ":lua require(\"harpoon.ui\").nav_prev()<cr>", opts)
 -----------------------------------------------------------------------
 -- easymotion -
 -----------------------------------------------------------------------
-
 vim.cmd('map <Leader><Leader> <Plug>(easymotion)')

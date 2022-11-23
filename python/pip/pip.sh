@@ -7,7 +7,7 @@ sudo easy_install pip
 /Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip
 sudo easy_install pip3
 
-pip install pyright
+pip3 install pyright
 pip3 install PyQt5
 pip3 install PyQtWebEngine
 pip3 install qutebrowser
