@@ -35,7 +35,7 @@ elif [[ "$os" == "linux" ]]; then
 fi
 
 ## git pass helper
-ln -sf $DOTFILES/git/git/pass-git-helper $HOME/.config
+ln -sf $DOTFILES/git/pass-git-helper $HOME/.config
 
 # alacritty
 if [[ "$os" == "osx" ]]; then

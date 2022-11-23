@@ -8,7 +8,7 @@
 
 ## Installation
 
-- osx: 
+### osx: 
 
 *I recommend install qutebrowser twice!*
 
@@ -31,4 +31,6 @@ rm qutebrowser-2.4.0.dmg
 
 *I do not recommend installing the brew version of qutebrowser as it did not work for me*
 
-- arch linux: `sudo pacman -S qutebrowser`
+### arch linux: 
+
+`sudo pacman -S qutebrowser`

@@ -6,6 +6,10 @@
 
 ## Installation
 
-- osx: `brew install --cask alacritty`
+### osx:
 
-- arch linux: `sudo pacman -S alacritty`
+`brew install --cask alacritty`
+
+### arch linux:
+
+`sudo pacman -S alacritty`

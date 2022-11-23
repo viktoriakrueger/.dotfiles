@@ -2,6 +2,10 @@
 
 ## Installation
 
-- osx: `brew install bat`
+### osx:
 
-- arch linux: `sudo pacman -S bat`
+`brew install bat`
+
+### arch linux:
+
+`sudo pacman -S bat`
