@@ -1,4 +1,4 @@
-# https://www.zsh.org/
+# [qutebrowser](https://www.qutebrowser.org/)
 
 [qutebrowser](https://github.com/qutebrowser/qutebrowser)  is a keyboard-focused browser with a minimal GUI. It’s based on Python and Qt and free software, licensed under the GPL
 
