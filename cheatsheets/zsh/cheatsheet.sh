@@ -26,4 +26,17 @@ wifi
 wifi-connect
 networksetup -setairportnetwork en0 <SSID_OF_NETWORK> <PASSWORD>
 
-
+# colorls
+-1
+-a (or) --all
+-A (or) --almost-all
+-d (or) --dirs
+-f (or) --files
+-h (or) --help
+-l (or) --long
+-r (or) --report
+--tree (or) --tree=[DEPTH]
+--gs (or) --git-status
+--sd (or) --sort-dirs or --group-directories-first
+--sf (or) --sort-files
+-t
