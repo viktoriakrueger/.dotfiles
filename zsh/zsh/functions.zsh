@@ -161,45 +161,13 @@ function PlugUpdate(){
   cd $VDOTDIR/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $ZDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $TDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd
 }
 
-##########################################################################################################
-# templates                                                                                              #
-##########################################################################################################
-
-# when its come to create markdown documents use this
-
-# 1st link, when want to sent it push it do 2nd copie
-
-links(){
-    rm -rf wordcount.lua literature.bib styles .Rprofile && ln -sf ~/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && ln -sf $DOTFILES/styles "$(pwd)" && ln -sf $DROPBOX/googlebox/literature.bib "$(pwd)" && ln -sf $DOTFILES/R/R/.Rprofile "$(pwd)"
-}
-
-copies(){
-rm -rf wordcount.lua literature.bib styles .Rprofile && cp $HOME/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && cp -rf $DOTFILES/styles "$(pwd)" && cp $DROPBOX/googlebox/literature.bib "$(pwd)" && cp $DOTFILES/R/.Rprofile "$(pwd)"
-}
-
-pdf(){
-    cp $DOTFILES/Templates/pdf.rmd "$(pwd)"
-}
-
-html(){
-    cp $DOTFILES/Templates/html.rmd "$(pwd)"
-}
-
-letter(){
-    cp $DOTFILES/Templates/letter.rmd "$(pwd)"
-}
-
-pptx(){
-    cp $DOTFILES/Templates/pptx.rmd "$(pwd)"
-}
-
-word(){
-    cp $DOTFILES/Templates/word.rmd "$(pwd)"
-}
-
 #####################################################
 # zsh functions mac                                 #
 #####################################################
+
+applemouse(){
+  blueutil -p 1 && blueutil --connect 04-4b-ed-d2-45-cf
+}
 
 if [[ "$os" == "osx" ]]; then
 
