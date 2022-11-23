@@ -2,6 +2,6 @@
 
 [qutebrowser - homepage](https://www.qutebrowser.org/)
 
-I use qutebrowser as main main webbrowser.
+I use qutebrowser as my main webbrowser.
 
-I higly recommend [pass](https://www.passwordstore.org/) password manager which can be integrated into qutebrowser with a userscript [qute-pass](.qutebrowser/userscripts/qute-pass)
+I higly recommend [pass](https://www.passwordstore.org/) as apassword manager which can be integrated into qutebrowser with a userscript [qute-pass](.qutebrowser/userscripts/qute-pass)
