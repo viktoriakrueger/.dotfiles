@@ -13,7 +13,7 @@ ___
 7. click "Open" It should show up in the list with a check mark next to it.
 ___
 
-### remove standard hotkey `cmd+<space>`
+### remove standard hotkey `"cmd+<space>"`
 
 1. go to System Preferences
 2. Keyboard > Shortcuts > Spotlight > uncheck
@@ -25,14 +25,12 @@ ___
 
 `audiomidisetup`
 
-- click "+" button > Create Aggregated Device > name it "quicktime player input" > check BlackHole 16ch
-
-- click "+" button > Create Multi-Output Device > name it "screen record w/ auio" > check Built-In Output (must be on top!) + BlackHole 16ch
-
-- record screen with "screen record w/ audio"
+1. click "+" button > Create Aggregated Device > name it "quicktime player input" > check BlackHole 16ch
+2. click "+" button > Create Multi-Output Device > name it "screen record w/ auio" > check Built-In Output (must be on top!) + BlackHole 16ch
+3. record screen with "screen record w/ audio"
 ___
 
-### posteo mail / carddav caldav
+### posteo mail / carddav / caldav
 
 email address: ****@**.**
 
