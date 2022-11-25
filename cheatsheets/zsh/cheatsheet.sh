@@ -19,7 +19,7 @@ for f in *; do mv -- "$f" "${f}.extension"; done
 var=$(lynx --dump LINK_HERE_WITHOUT_QUOTES | grep ".*\.pdf$"  | awk '/http/{print $2}') | echo $var | for i in $(echo $var); do wget $i; done
 
 # see all available wifi connections
-wifi
+wifi-scan
 /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
 
 # connect ti wifi
