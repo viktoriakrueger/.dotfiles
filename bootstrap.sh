@@ -54,6 +54,11 @@ if [[ "$os" == "osx" ]]; then
 	source $DOTFILES/osx/applications.sh
 fi
 
+# define open with
+if [[ "$os" == "osx" ]]; then
+  source $DOTFILES/osx/duti.sh
+fi
+
 # install repositores
 source $DOTFILES/bootstrap/repositories.sh
 

@@ -173,6 +173,10 @@ jbl-box(){
   blueutil -p 1 && blueutil --connect $(pass bluetooth/jbl-box)
 }
 
+keychron(){
+  blueutil -p 1 && blueutil --connect $(pass bluetooth/keychronk2)
+}
+
 if [[ "$os" == "osx" ]]; then
 
 audiomidisetup(){
@@ -219,10 +223,6 @@ plist(){
     /usr/bin/open -a "PLIST Editor"
 }
 
-powerpoint(){
-    /usr/bin/open -a "Microsoft PowerPoint" $1
-}
-
 dropbox(){
     /usr/bin/open -a Dropbox
 }
@@ -247,10 +247,6 @@ preview(){
     /usr/bin/open -a Preview $1
 }
 
-pycharm(){
-    /usr/bin/open -a 'pycharm CE' $1
-}
-
 rstudio(){
     /usr/bin/open -a Rstudio $1
 }
@@ -261,6 +257,10 @@ mails(){
 
 amphetamine(){
   /usr/bin/open -a Amphetamine
+}
+
+calendar(){
+  /usr/bin/open -a Calendar
 }
 
 wifi-scan(){
