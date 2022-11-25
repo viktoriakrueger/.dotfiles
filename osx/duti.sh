@@ -31,6 +31,10 @@ duti -s net.sourceforge.skim-app.skim .pdf all
 # libreoffice
 duti -s org.libreoffice.script .docx all
 duti -s org.libreoffice.script .doc all
+duti -s org.libreoffice.script .pptx all
+duti -s org.libreoffice.script .xlsx all
+duti -s org.libreoffice.script .xls all
+
 
 # qview
 duti -s com.interversehq.qView .jpg all
