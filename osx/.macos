@@ -206,6 +206,9 @@ defaults write com.apple.Mail DisableReplyAnimations -bool true
 # keyboard & trackpad                                                         #
 ###############################################################################
 
+# keyboard layout
+sudo cp -rf $DOTFILES/osx/Library/Keyboard\ Layouts/Roman.bundle $HOME/Library/Keyboard\ Layouts/
+
 # unlink media buttons
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 #launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist  # undo
