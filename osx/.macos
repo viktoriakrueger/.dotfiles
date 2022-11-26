@@ -237,6 +237,11 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
 
+# remap esc top caps lock
+#hidutil property --get "UserKeyMapping" # check current mapping
+sudo cp $DOTFILES/osx/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist $HOME/Library/LaunchAgents/
+launchctl load $HOME/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist 
+
 ###############################################################################
 
 killall SystemUIServer
