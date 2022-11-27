@@ -6,12 +6,6 @@ sudo -v
 # keep-alive: update existing `sudo` time stamp until `bootstap.sh` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# replace ~/.password-store with the git repository
-git clone https://github.com/alexchaichan/.password-store.git ~/Downloads/.password-store && rm -r ~/.password-store && mv ~/Downloads/.password-store ~/.password-store
-
-# clear ~/Downloads
-rm ~/Downloads/gnupg.zip ~/Downloads/.password-store-main.zip
-
 # check for os type
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -31,6 +25,12 @@ export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
 export CONFIG=$HOME/.config
 
+# replace ~/.password-store with the git repository
+git clone https://github.com/alexchaichan/.password-store.git $HOME/Downloads/.password-store && rm -r $HOME/.password-store && mv $HOME/Downloads/.password-store $HOME/.password-store
+
+# clear ~/Downloads
+rm $HOME/Downloads/gnupg.zip $HOME/Downloads/.password-store-main.zip
+
 # make osx system changes
 if [[ "$os" == "osx" ]]; then
 	source $DOTFILES/osx/.macos
@@ -46,7 +46,7 @@ source $DOTFILES/bootstrap/plugins.sh
 if [[ "$os" == "osx" ]]; then
 	brew bundle --file=$DOTFILES/osx/Brewfile
 elif [[ "$os" == "linux" ]]; then
-	pacman -S --needed - < $DOTFILES/linux/arch_linux/pacman/Pacmanfile
+	pacman -S --needed - < $DOTFILES/linux/arch_linux/pacman/pacmanfile
 fi
 
 # install applications
