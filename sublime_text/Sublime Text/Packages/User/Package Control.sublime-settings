@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Dracula Color Scheme",
+		"LSP",
+		"LSP-marksman",
+		"LSP-R",
+		"MarkdownPreview",
+		"Package Control",
+		"R-Box",
+		"R-IDE",
+		"SideBarEnhancements",
+		"ZSH",
+	],
+}

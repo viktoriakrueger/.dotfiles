@@ -191,6 +191,11 @@ ln -sf $DOTFILES/xboard/.xboardrc $HOME
 # termchat
 ln -sf $DOTFILES/termchat/termchat $HOME/.config
 
+# sublime text
+if [[ "$os" == "linux" ]]; then
+  sudo ln -sf $DOTFILES/sublime_text/Sublime\ Text/Packages/User/* $HOME/Library/Application\ Support/Sublime\ Text/Packages/User
+fi
+
 ########################################################
 # services                                             #
 ########################################################
