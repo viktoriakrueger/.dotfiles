@@ -88,8 +88,8 @@ source $DOTFILES/java/javascript/npm.sh
 source $DOTFILES/rust/packages.sh
 
 # passwords
-echo | pass spotify.com/spotify-tui  >> ~/.config/spotify-tui/client.yml
-echo | pass spotify.com/spotifyd  >> ~/.cache/spotifyd/credentials.json
+echo | pass spotify/spotify-tui  >> ~/.config/spotify-tui/client.yml
+echo | pass spotify/spotifyd  >> ~/.cache/spotifyd/credentials.json
 
 # make zsh default shell
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
