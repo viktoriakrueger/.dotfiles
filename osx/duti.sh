@@ -25,6 +25,7 @@ duti -s com.sublimetext.4 .tex all
 duti -s com.sublimetext.4 .sty all
 duti -s com.sublimetext.4 .tmux.conf all
 duti -s com.sublimetext.4 .css all
+duti -s com.sublimetext.4 .cfg all
 
 # skim
 duti -s net.sourceforge.skim-app.skim .pdf all
