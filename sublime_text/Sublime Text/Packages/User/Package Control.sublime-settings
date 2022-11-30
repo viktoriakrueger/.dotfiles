@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"Dracula Color Scheme",
+		"LaTeXTools",
 		"LSP",
 		"LSP-marksman",
 		"LSP-R",

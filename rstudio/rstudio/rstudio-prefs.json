@@ -21,7 +21,7 @@
     "rmd_viewer_type": "none",
     "global_theme": "alternate",
     "terminal_initial_directory": "home",
-    "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/thesisdown/rmarkdown/templates/thesis",
+    "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/vitae/rmarkdown/templates/latexcv",
     "show_hidden_files": true,
     "python_type": "system",
     "python_version": "3.9.15",
