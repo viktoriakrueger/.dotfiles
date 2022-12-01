@@ -1,6 +1,0 @@
-
-```{r, child=c('declaration.Rmd')} 
-```
-\pagebreak
-
-<!-- \includepdf[pages=-,openright]{images/FILE.pdf} -->
