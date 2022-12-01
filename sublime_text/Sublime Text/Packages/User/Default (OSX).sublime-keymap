@@ -1,5 +1,20 @@
 [
 
-	{ "keys": ["control+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} },
+	{
+    "keys": ["command+shift+c"],
+    "command": "toggle_comment",
+    "args": { "block": false } 
+	},
+
+	{   
+	"keys": ["command+shift+c"],
+    "command": "toggle_comment",
+    "args": { "block": true }
+	},
+
+
+	{ 
+		"keys": ["control+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"}
+	},
 
 ]

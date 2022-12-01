@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Advanced CSV",
 		"Dracula Color Scheme",
 		"LaTeXTools",
 		"LSP",
@@ -12,9 +13,8 @@
 		"LSP-R",
 		"MarkdownPreview",
 		"Package Control",
-		"R-Box",
 		"R-IDE",
+		"rainbow_csv",
 		"SideBarEnhancements",
-		"ZSH",
 	],
 }
