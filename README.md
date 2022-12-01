@@ -46,6 +46,12 @@ fi
 unzip ~/Downloads/gnupg.zip -d ~/Downloads/ && mv ~/Downloads/gnupg ~/.gnupg
 ```
 
+## store [`.ssh`](https://drive.proton.me/urls/ZMK4QJ66H4#OTp4ouSzq31D) into `~/`
+
+```
+unzip ~/Downloads/ssh.zip -d ~/Downloads/ && mv ~/Downloads/ssh ~/.ssh
+```
+
 ## run installation file
 
 `cd ~/.dotfiles && ./bootstrap.sh`
