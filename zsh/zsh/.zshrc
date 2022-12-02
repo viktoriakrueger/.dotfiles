@@ -30,6 +30,7 @@ export ZDOTDIR=$HOME/.zsh
 export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
 export CONFIG=$HOME/.config
+export SUBL=$HOME/Library/Application\ Support/Sublime\ Text
 
 export PATH=$HOME/.cargo/bin:$PATH
 # export PATH=/opt/homebrew/bin:$PATH

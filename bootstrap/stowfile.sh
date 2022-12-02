@@ -193,7 +193,9 @@ ln -sf $DOTFILES/termchat/termchat $HOME/.config
 
 # sublime text
 if [[ "$os" == "linux" ]]; then
-  sudo ln -sf $DOTFILES/sublime_text/Sublime\ Text/Packages/User/* $HOME/Library/Application\ Support/Sublime\ Text/Packages/User
+  sudo mkdir $SUBL && mkdir $SUBL\User
+  sudo ln -sf $DOTFILES/sublime_text/Sublime\ Text/Packages/User/* $SUBL/Packages/User
+  sudo ln -sf $DOTFILES/sublime_text/Sublime\ Text/Packages/Dracula\ Color\ Scheme $SUBL/Packages/
 fi
 
 ########################################################

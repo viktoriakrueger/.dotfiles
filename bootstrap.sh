@@ -24,6 +24,7 @@ export ZDOTDIR=$HOME/.zsh
 export VDOTDIR=$HOME/.config/nvim
 export TDOTDIR=$HOME/.tmux
 export CONFIG=$HOME/.config
+export SUBL=$HOME/Library/Application\ Support/Sublime\ Text/
 
 # replace ~/.password-store with the git repository
 git clone https://github.com/alexchaichan/.password-store.git $HOME/Downloads/.password-store && rm -r $HOME/.password-store && mv $HOME/Downloads/.password-store $HOME/.password-store
