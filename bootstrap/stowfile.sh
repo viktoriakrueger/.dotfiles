@@ -91,7 +91,9 @@ ln -sf $DOTFILES/bat/bat $CONFIG
 mkdir $CONFIG/rstudio ; ln -sf $DOTFILES/rstudio/rstudio/rstudio-prefs.json $CONFIG/rstudio ; ln -sf $DOTFILES/snippets $CONFIG/rstudio/
 
 # psychopy
-mkdir $HOME/.psychopy3 ; ln -sf $DOTFILES/python/psychopy/.psychopy3/* $HOME/.psychopy3
+mkdir $HOME/.psychopy3 ; mkdir $HOME/.psychopy3/themes
+ln -sf $DOTFILES/python/psychopy/.psychopy3/themes/* $HOME/.psychopy3/themes
+ln -sf $DOTFILES/python/psychopy/.psychopy3/userPrefs.cfg $HOME/.psychopy3/
 
 # zathura
 mkdir $CONFIG/zathura
