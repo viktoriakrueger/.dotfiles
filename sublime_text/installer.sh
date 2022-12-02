@@ -4,7 +4,7 @@ export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
 export DOTFILES=$HOME/.dotfiles
 export SUBL=$HOME/Library/Application\ Support/Sublime\ Text/
 
-subl 
+subl --command "install_package_control"
 
 pkill subl
 
