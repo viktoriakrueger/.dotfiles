@@ -193,6 +193,13 @@ ln -sf $DOTFILES/xboard/.xboardrc $HOME
 # termchat
 ln -sf $DOTFILES/termchat/termchat $HOME/.config
 
+########################################################
+# scripts                                              #
+########################################################
+
+# keyboards
+ln -sf $DOTFILES/zsh/scripts/keyboards /usr/local/bin/keyboards
+ln -sf $DOTFILES/zsh/scripts/monitors /usr/local/bin/monitors
 
 ########################################################
 # services                                             #

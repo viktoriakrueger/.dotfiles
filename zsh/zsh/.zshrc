@@ -108,36 +108,25 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
-# define connected keyboard
+####################################################################################
+# keyboard                                                                         #
+####################################################################################
+/usr/local/bin/keyboards
 
-if [[ "$os" == "osx" ]]; then
+# key-bindings
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
 
-  # keyboard / layout check
-  export KEYCHRON_USB=$(ioreg -p IOUSB -w0 | sed 's/[^o]*o //; s/@.*$//' | grep "Keychron" | sed 's/[^a-zA-Z0-9]//g')
-  export KEYCHRON_BLUETOOTH=$(system_profiler SPBluetoothDataType | grep "0x800020")
+####################################################################################
+# monitor                                                                          #
+####################################################################################
 
-elif [[ "$os" == "linux" ]]; then
+/usr/local/bin/monitors 
 
-  export KEYCHRON_USB=$(lsusb | grep 'Keychron' | cut -f7 -d" ")
-  export KEYCHRON_BLUETOOTH=$()
 
-fi
-
-# specific Keyboard settings
-if [[ "$os" == "osx" && "$KEYCHRON_BLUETOOTH" == "KeychronK2" || "$KEYCHRON_BLUETOOTH" == "              Services: 0x800020 < HID ACL >" ]]; then
-
-  xkbswitch -s 2
-
-  # key-bindings
-  bindkey "^[[1~" beginning-of-line
-  bindkey "^[[4~" end-of-line
-
-else
-  xkbswitch -s 1
-
-  bindkey "^[[1" beginning-of-line
-  bindkey "^[[4" end-of-line
-fi
+####################################################################################
+# anaconda                                                                         #
+####################################################################################
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
