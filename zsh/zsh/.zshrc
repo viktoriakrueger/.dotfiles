@@ -51,6 +51,10 @@ export NVM_DIR="$HOME/.nvm"
 export EDITOR=nvim
 export TERM=screen-256color
 
+# key-bindings
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
 # source plugins
 source $ZDOTDIR/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
 source $ZDOTDIR/ohmyzsh/plugins/vi-mode/vi-mode.plugin.zsh
@@ -64,7 +68,7 @@ source $DOTFILES/zsh/zsh/functions.zsh
 
 # fzf
 if [[ "$os" == "osx" ]]; then
-  source /usr/local/Cellar/fzf/*/shell/completion.zsh
+ 	source /usr/local/Cellar/fzf/*/shell/completion.zsh
 	source /usr/local/Cellar/fzf/*/shell/key-bindings.zsh
 elif [[ "$os" == "linux" ]]; then
 	#source /usr/local/fzf/0.30.0/shell/completion.zsh
