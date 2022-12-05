@@ -52,8 +52,8 @@ export EDITOR=nvim
 export TERM=screen-256color
 
 # key-bindings
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
+# bindkey "^[[H" beginning-of-line
+# bindkey "^[[F" end-of-line
 
 # source plugins
 source $ZDOTDIR/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
@@ -112,6 +112,15 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
+# keyboard / layout check
+export KEYBOARD=$(ioreg -p IOUSB -w0 | sed 's/[^o]*o //; s/@.*$//' | grep "Keychron")
+
+if [[ "$os" == "osx" && "$KEYBOARD" == "Keychron K2" ]]; then
+  xkbswitch -s 2
+else
+  xkbswitch -s 1
+fi
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if [[ "$os" == "linux" ]]; then
@@ -140,3 +149,4 @@ elif [[ "$os" == "osx" ]]; then
 
 fi
 # <<< conda initialize <<<
+

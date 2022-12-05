@@ -243,7 +243,10 @@ defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
 # remap esc top caps lock
 #hidutil property --get "UserKeyMapping" # check current mapping
 sudo cp $DOTFILES/osx/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist $HOME/Library/LaunchAgents/
-launchctl load $HOME/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist 
+launchctl load $HOME/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist
+
+# xkswitch keyboardlayout switcher
+cp ~/.dotfiles/osx/usr/local/bin/xkbswitch /usr/local/bin
 
 ###############################################################################
 

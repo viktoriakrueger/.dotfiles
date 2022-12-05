@@ -1,3 +1,6 @@
 {
-    "workbench.colorTheme": "Dracula"
+    "workbench.colorTheme": "Dracula",
+    "workbench.editorAssociations": {
+        "*.plist": "default"
+    }
 }
