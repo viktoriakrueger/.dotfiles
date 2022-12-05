@@ -51,10 +51,6 @@ export NVM_DIR="$HOME/.nvm"
 export EDITOR=nvim
 export TERM=screen-256color
 
-# key-bindings
-# bindkey "^[[H" beginning-of-line
-# bindkey "^[[F" end-of-line
-
 # source plugins
 source $ZDOTDIR/dracula-zsh-syntax-highlighting/zsh-syntax-highlighting.sh
 source $ZDOTDIR/ohmyzsh/plugins/vi-mode/vi-mode.plugin.zsh
@@ -112,13 +108,35 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
-# keyboard / layout check
-export KEYBOARD=$(ioreg -p IOUSB -w0 | sed 's/[^o]*o //; s/@.*$//' | grep "Keychron")
+# define connected keyboard
 
-if [[ "$os" == "osx" && "$KEYBOARD" == "Keychron K2" ]]; then
+if [[ "$os" == "osx" ]]; then
+
+  # keyboard / layout check
+  export KEYCHRON_USB=$(ioreg -p IOUSB -w0 | sed 's/[^o]*o //; s/@.*$//' | grep "Keychron" | sed 's/[^a-zA-Z0-9]//g')
+  export KEYCHRON_BLUETOOTH=$(system_profiler SPBluetoothDataType | grep "0x800020")
+
+elif [[ "$os" == "linux" ]]; then
+
+  export KEYCHRON_USB=$(lsusb | grep 'Keychron' | cut -f7 -d" ")
+  export KEYCHRON_BLUETOOTH=$()
+
+fi
+
+# specific Keyboard settings
+if [[ "$os" == "osx" && "$KEYCHRON_BLUETOOTH" == "KeychronK2" || "$KEYCHRON_BLUETOOTH" == "              Services: 0x800020 < HID ACL >" ]]; then
+
   xkbswitch -s 2
+
+  # key-bindings
+  bindkey "^[[1~" beginning-of-line
+  bindkey "^[[4~" end-of-line
+
 else
   xkbswitch -s 1
+
+  bindkey "^[[1" beginning-of-line
+  bindkey "^[[4" end-of-line
 fi
 
 # >>> conda initialize >>>
