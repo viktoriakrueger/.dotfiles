@@ -9,7 +9,7 @@
 	% zwischen Absätzen eine leere Zeile einfügen, statt lediglich Einrückung
 	parskip=full,
 	% Papierformat auf DIN-A4
-	paper=A4,	
+	paper=A4,
 	% Briefkopf (ganz oben) rechts ausrichten, standardmäßig links
 	fromalign=right,
 	% Telefonnummer im Briefkopf anzeigen
@@ -22,7 +22,7 @@
 	%fromurl=true,
 	% Faltmarkierungen verbergen
 	foldmarks=false,
-	% Die neuste Version von scrlettr2 verwenden 
+	% Die neuste Version von scrlettr2 verwenden
 	version=last,
 ]{scrlttr2}
 
@@ -30,7 +30,7 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage[scaled]{helvet}
-\renewcommand\familydefault{\sfdefault} 
+\renewcommand\familydefault{\sfdefault}
 
 % Eurosymbol-Unterstützung
 \usepackage{eurosym}
@@ -48,8 +48,6 @@
 % deswegen hyperref. Option hidelinks versteckt farbigen Rahmen.
 \usepackage[hidelinks]{hyperref}
 
-
-
 \begin{document}
 
 \pagestyle{empty}
@@ -59,8 +57,6 @@
 
 % Name nach Schlussgruß (unter Unterschrift) nicht nach rechts einrücken
 \renewcommand*{\raggedsignature}{\raggedright}
-
-
 
 % Absendername
 \setkomavar{fromname}{Aleksej Chaichan}
@@ -85,8 +81,6 @@
 % der erste Parameter ist fürs Klicken, der zweite wird angezeigt/gedruckt
 \setkomavar{fromurl}[]{\href{http://absender.de}{absender.de}}
 
-
-
 % Ort beim Datum
 \setkomavar{place}{Kassel}
 
@@ -96,8 +90,6 @@
 % Betreff
 \setkomavar{subject}{TITLE}
 
-
-
 % Kundennummer
 %\setkomavar{customer}[\customername]{DE-112233}
 
@@ -106,8 +98,6 @@
 
 % Ihr Schreiben vom
 %\setkomavar{yourmail}[\yourmailname]{1. April 2018}
-
-
 
 \begin{letter}{
 	ANREDE \\
@@ -120,9 +110,7 @@
 
 BODY
 
-
 \closing{ENDE}
-
 
 % Post Scriptum
 %\ps PS: Ich bin bis März nur telefonisch erreichbar.
