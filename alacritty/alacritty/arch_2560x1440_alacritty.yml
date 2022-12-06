@@ -1,0 +1,23 @@
+# linux
+
+font:
+  # Point size
+  size: 14.0
+
+window:
+
+  dimensions:
+    columns: 250
+    lines: 60
+
+  decorations: none
+
+shell:
+  program: /usr/bin/zsh
+  args:
+   - --login
+   - -c
+   - "tmux attach || tmux"
+
+import:
+  - ~/.dotfiles/alacritty/alacritty/alacritty.yml

@@ -12,6 +12,7 @@
 
 # check for os type
 unameOut="$(uname -s)"
+
 case "${unameOut}" in
     Linux*)     os=linux;;
     Darwin*)    os=osx;;
@@ -19,6 +20,38 @@ case "${unameOut}" in
     MINGW*)     os=mingw;;
     *)          os="UNKNOWN:${unameOut}"
 esac
+
+# command to check if command exists
+command_exists() {
+	local command="$1"
+	type "$command" >/dev/null 2>&1
+}
+
+# check for laptop / desktop
+
+if [[ "$os" == "osx" ]]; then
+
+  local battery=$(pmset -g batt  | grep -o "InternalBattery")
+
+    if [ -z "$battery" ]; then
+			pc="desktop"
+
+    else
+      pc="laptop"
+
+    fi
+
+  elif [[ "$os" == "linux" ]]; then
+
+    if [ -z /org/freedesktop/UPower/devices/battery_BAT0 ]; then
+			pc="desktop"
+
+    else
+      pc="laptop"
+
+    fi
+
+fi
 
 # create $ directories
 if [[ "$os" == "osx" || "$os" == "linux" ]]; then
@@ -111,18 +144,25 @@ setopt appendhistory
 ####################################################################################
 # keyboard                                                                         #
 ####################################################################################
-/usr/local/bin/keyboards
+if [[ "$os" == "osx" && "$pc" == "laptop"]]; then
+
+  /usr/local/bin/keyboards
 
 # key-bindings
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
 
+fi
+
 ####################################################################################
 # monitor                                                                          #
 ####################################################################################
 
-/usr/local/bin/monitors 
+if [[ "$os" == "osx" || "$os" == "linux"  && "$pc" == "laptop"]]; then
 
+  /usr/local/bin/monitors
+
+fi
 
 ####################################################################################
 # anaconda                                                                         #

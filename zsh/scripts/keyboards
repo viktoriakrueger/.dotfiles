@@ -50,7 +50,7 @@ if [[ "$os" == "osx" && "$KEYCHRON_USB" == "KeychronK2" || "$KEYCHRON_BLUETOOTH"
 #elif [[ "$os" == "osx" && "$_BLUETOOTH" == "" || "$_BLUETOOTH" == ""]]; then
 
 else
-  
+
   xkbswitch -s 1
 
   /usr/bin/hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}]}' >/dev/null 2>&1
