@@ -6,10 +6,8 @@
 	"installed_packages":
 	[
 		"LaTeXTools",
-		"LSP",
-		"LSP-marksman",
 		"LSP-R",
-		"MarkdownPreview",
+		"Outline",
 		"Package Control",
 		"R-IDE",
 		"rainbow_csv",
