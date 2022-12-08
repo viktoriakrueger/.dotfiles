@@ -162,6 +162,7 @@ c.url.searchengines = {
  'fr': 'https://defr.dict.cc/?s={}',
  'ru': 'https://deru.dict.cc/?s={}',
  'scholar': 'https://scholar.google.com/scholar?hl=de&as_sdt=0%2C5&q={}&btnG=',
+ 'karla': 'https://hds.hebis.de/ubks/Discover/EBSCO?type=allfields&service=combined&lookfor={}',
  'wiki': 'https://de.wikipedia.org/wiki/{}',
  'archwiki': 'https://wiki.archlinux.org/index.php?search={}&title=Special%3ASearch&wprov=acrw1',
  'duden': 'https://www.duden.de/suchen/dudenonline/{}',
