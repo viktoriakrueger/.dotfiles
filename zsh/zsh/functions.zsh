@@ -304,3 +304,7 @@ ssh_viki(){
   pass .
   ssh "$(pass ssh/viki_thinkpad)"
 }
+
+ba(){
+  nvim ~/repositories/ba_thesis/
+}

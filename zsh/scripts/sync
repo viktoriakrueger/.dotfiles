@@ -1,0 +1,35 @@
+#!/usr/bin/env zsh
+
+# check for os type
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     os=linux;;
+    Darwin*)    os=osx;;
+    CYGWIN*)    os=cygwin;;
+    MINGW*)     os=mingw;;
+    *)          os="UNKNOWN:${unameOut}"
+esac
+
+# create $ directories
+if [[ "$os" == "osx" || "$os" == "linux" ]]; then
+  export HOME="$(echo -n $(bash -c "cd ~${USER} && pwd"))"
+fi
+export DOTFILES=$HOME/.dotfiles
+
+export batt=$(pmset -g batt | grep "Now drawing from 'AC Power'")
+
+if [[ "$batt" == "Now drawing from 'AC Power'" ]]; then
+  ac=true
+
+else
+  ac=false
+fi
+
+if [[ "$ac" == 'true' ]]; then
+
+  pass .
+  vdirsyncer discover my_contacts
+  vdirsyncer sync
+  mbsync posteo
+
+fi

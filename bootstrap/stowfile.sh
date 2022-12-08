@@ -199,7 +199,12 @@ ln -sf $DOTFILES/termchat/termchat $HOME/.config
 
 # keyboards
 ln -sf $DOTFILES/zsh/scripts/keyboards /usr/local/bin/keyboards
+
+# monitors
 ln -sf $DOTFILES/zsh/scripts/monitors /usr/local/bin/monitors
+
+# ac
+ln -sf $DOTFILES/zsh/scripts/sync /usr/local/bin/sync
 
 ########################################################
 # services                                             #
