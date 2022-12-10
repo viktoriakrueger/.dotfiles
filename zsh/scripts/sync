@@ -27,7 +27,6 @@ fi
 
 if [[ "$ac" == 'true' ]]; then
 
-  pass .
   vdirsyncer discover my_contacts
   vdirsyncer sync
   mbsync posteo

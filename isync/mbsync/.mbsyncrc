@@ -2,7 +2,7 @@ IMAPAccount posteo
 Host posteo.de
 Port 993
 User aleksej.chaichan@posteo.de
-PassCmd "pass posteo.de/aleksej.chaichan@posteo.de"
+PassCmd "/usr/local/bin/pass posteo.de/aleksej.chaichan@posteo.de"
 # Pass xxxx-xxxx-xxxx-xxxx
 SSLType IMAPS
 #CertificateFile /usr/local/etc/openssl@1.1/cert.pem
