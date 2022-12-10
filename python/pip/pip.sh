@@ -20,6 +20,7 @@ pip3 install neovim
 pip3 install pynvim
 pip3 install breadability
 pip3 install readability
+pip3 install mutt_ics
 
 # jupyter
 pip3 install JLDracula

@@ -577,6 +577,7 @@ bind index,pager B sidebar-toggle-visible
 #        message/partial
 
 ## Priorität der MIME-Typen
+auto_view text/calendar application/ics
 #alternative_order text/enriched text/plain text/html
 
 ## Nicht dekodieren vor dem Weiterleiten; so werden alle Header eingefügt (man
