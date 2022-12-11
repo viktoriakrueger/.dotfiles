@@ -27,8 +27,8 @@ fi
 
 if [[ "$ac" == 'true' ]]; then
 
-  vdirsyncer discover my_contacts
-  vdirsyncer sync
-  mbsync posteo
+  # /usr/local/bin/vdirsyncer discover my_contacts
+  # /usr/local/bin/vdirsyncer sync
+  /usr/local/bin/mbsync posteo
 
 fi

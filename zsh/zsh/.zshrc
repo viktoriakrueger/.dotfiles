@@ -68,6 +68,7 @@ export SUBL=$HOME/Library/Application\ Support/Sublime\ Text
 export PATH=$HOME/.cargo/bin:$PATH
 # export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/bin:$PATH
+export PATH=$PATH:/usr/local/bin
 
 #If you need to have openjdk first in your PATH, run:
 #export PATH="/usr/local/opt/openjdk/bin:$PATH"
