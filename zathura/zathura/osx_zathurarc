@@ -54,18 +54,15 @@ set selection-clipboard "clipboard"
 # set recolor true
 #
 # #scrolling
-set scroll-step 1
-set scroll-hstep 1
-
+set scroll-step 50
+set scroll-hstep 50
 
 # One page per row by default
 set pages-per-row 1
 
-
 #stop at page boundries
 set scroll-page-aware "true"
 set scroll-full-overlap 0.01
-
 
 #zoom settings
 #set zoom-min 10

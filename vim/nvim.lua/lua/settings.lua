@@ -67,6 +67,9 @@ vim.o.swapfile = false -- do not use swap file
 -- vim.o.backupdir = HOME .. '/.vim/tmp/backup//' -- backups
 -- vim.o.directory = '/.vim/tmp/swap//' -- swap files
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.cmd([[
  au FileType python set ts=4 sw=4
  au BufRead,BufNewFile *.md set ft=mkd tw=80 syntax=markdown
@@ -96,7 +99,7 @@ vim.cmd('let g:minimap_auto_start_win_enter = 0')
 
 -- colorscheme
 vim.cmd('set t_Co=256')
-vim.cmd('set termguicolors')
+vim.opt.termguicolors = true
 vim.cmd('colorscheme dracula')
 vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 

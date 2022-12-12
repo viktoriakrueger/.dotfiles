@@ -1,4 +1,3 @@
-
 #!/bin/sh
 #
 # This is an example hook. It synchronizes calcurse with a CalDAV server before

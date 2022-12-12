@@ -262,7 +262,7 @@ c.content.blocking.method = 'both'
 ################################################################################
 
 # keybinding view videos with mpv
-config.bind('M', 'hint links spawn /usr/local/bin/mpv {hint-url}')
+config.bind('M', 'hint links spawn /usr/bin/env mpv {hint-url}')
 config.bind("Y", "spawn --userscript youtube_mp3_downloader.sh")
 config.bind("X", "spawn --userscript youtube_downloader.sh")
 
@@ -273,25 +273,11 @@ config.bind('z', 'spawn --userscript duden')
 
 # keybindings navigation
 
-# unbindings
-config.unbind('<q>', mode='normal')
-config.unbind('<d>', mode='normal')
-config.unbind('<H>', mode='normal')
-
 # close tabs qith q
-config.bind('q', 'tab-close')
-
-# go back with b
-config.bind('b', 'back')
-
-# forward with shift+b
-config.bind('B', 'forward')
+# config.bind('q', 'tab-close')
 
 # open a new tab with t
 config.bind('t', 'open -t')
-
-# homepage with shift+h
-config.bind('H', 'home')
 
 # toogle darkmode
 #config.bind('', 'config-cycle colors.webpage.darkmode.enabled ;; restart')
