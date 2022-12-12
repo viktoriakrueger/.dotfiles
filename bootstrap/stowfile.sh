@@ -193,6 +193,9 @@ ln -sf $DOTFILES/xboard/.xboardrc $HOME
 # termchat
 ln -sf $DOTFILES/termchat/termchat $HOME/.config
 
+# gnupg
+ln -sf $DOTFILES/gnupg/.gnupg $HOME/.gnupg
+
 ########################################################
 # scripts                                              #
 ########################################################

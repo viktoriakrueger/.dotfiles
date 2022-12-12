@@ -92,6 +92,9 @@ source $DOTFILES/rust/packages.sh
 echo | pass spotify/spotify-tui  >> ~/.config/spotify-tui/client.yml
 echo | pass spotify/spotifyd  >> ~/.cache/spotifyd/credentials.json
 
+# set gpg agent
+gpg-connect-agent reloadagent /bye
+
 # make zsh default shell
 if [ -z "`$SHELL -c 'echo $ZSH_VERSION'`" ]; then
   sudo sh -c "echo $(which zsh) >> /etc/shells"

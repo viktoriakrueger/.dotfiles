@@ -19,16 +19,35 @@ export DOTFILES=$HOME/.dotfiles
 export batt=$(pmset -g batt | grep "Now drawing from 'AC Power'")
 
 if [[ "$batt" == "Now drawing from 'AC Power'" ]]; then
+
   ac=true
 
 else
+
   ac=false
+
 fi
 
-if [[ "$ac" == 'true' ]]; then
+if [[ $(top | grep -m1 "alacritty" | awk '{print $2}') == "alacritty" ]]; then
 
-  # /usr/local/bin/vdirsyncer discover my_contacts
-  # /usr/local/bin/vdirsyncer sync
+  alacritty=true
+
+else
+
+  alacritty=false
+
+fi
+
+if [[ "$alacritty" == 'true' ]]; then
+
+  /usr/local/bin/pass .
+
+fi
+
+if [[ "$alacritty" == 'true' && "$ac" == 'true' || "$ac" == 'false' ]]; then
+
+  /usr/local/bin/vdirsyncer discover my_contacts
+  /usr/local/bin/vdirsyncer sync
   /usr/local/bin/mbsync posteo
 
 fi
