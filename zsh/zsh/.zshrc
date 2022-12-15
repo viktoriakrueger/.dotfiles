@@ -157,7 +157,7 @@ fi
 ####################################################################################
 # monitor                                                                          #
 ####################################################################################
-if [[ "$os" == "osx" || "$os" == "linux"  && "$pc" == "laptop" ]]; then
+if [[ "$os" == "osx" && "$pc" == "laptop" ]]; then
 
   /usr/local/bin/monitors
 
@@ -167,13 +167,16 @@ fi
 # ac                                                                          #
 ####################################################################################
 
-export batt=$(pmset -g batt | grep "Now drawing from 'AC Power'")
+if [[ "$os" == "osx" && "$pc" == "laptop" ]]; then
 
-if [[ "$batt" == "Now drawing from 'AC Power'" ]]; then
-  ac=true
+  export batt=$(pmset -g batt | grep "Now drawing from 'AC Power'")
 
-else
-  ac=false
+  if [[ "$batt" == "Now drawing from 'AC Power'" ]]; then
+    ac=true
+
+  else
+    ac=false
+  fi
 fi
 
 ####################################################################################
@@ -209,5 +212,16 @@ elif [[ "$os" == "osx" ]]; then
 fi
 # <<< conda initialize <<<
 
-# login
+####################################################################################
+# login                                                                            #
+####################################################################################
 pass .
+
+# start spotifyd if its not runnning
+export sptd=$(timeout 1s top | grep -m1 spotifyd | awk '{print $2}')
+
+if [[ "$os" == "osx" && "$sptd" == "" ]]; then
+
+  spotifyd
+
+fi

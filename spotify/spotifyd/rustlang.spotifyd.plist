@@ -1,11 +1,12 @@
-CTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
         <key>Label</key>
         <string>rustlang.spotifyd</string>
         <key>ProgramArguments</key>
         <array>
-            <string>/usr/local/bin/spotifyd</string>
+            <string>/Users/user/.cargo/bin/spotifyd</string>
             <string>--config-path=/Users/user/.config/spotifyd/spotifyd.conf</string>
             <string>--no-daemon</string>
         </array>
@@ -17,4 +18,3 @@ CTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/Prop
         <integer>30</integer>
     </dict>
 </plist>
-
