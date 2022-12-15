@@ -12,6 +12,7 @@ tmux_plugins=(
   'tmux-plugins/tmux-urlview'
   'tmux-plugins/tmux-yank'
   'tmux-plugins/tmux-prefix-highlight'
+  'alexchaichan/tmux-spotify-tui'
   'jaclu/tmux-menus'
   'xamut/tmux-weather'
   'schasse/tmux-jump'
