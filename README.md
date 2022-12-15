@@ -54,7 +54,7 @@ unzip ~/Downloads/ssh.zip -d ~/Downloads/ && mv ~/Downloads/ssh ~/.ssh
 
 ## run installation file
 
-`cd ~/.dotfiles && ./bootstrap.sh`
+`cd ~/.dotfiles && ./bootstrap`
 
 <!-- ## calcurse config -->
 <!---->

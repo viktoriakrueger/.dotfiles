@@ -38,10 +38,10 @@ if [[ "$os" == "osx" ]]; then
 fi
 
 # create symlinks from .dotfiles repo
-source $DOTFILES/bootstrap/stowfile.sh
+source $DOTFILES/bootstraped/stowfile.sh
 
 # install plugins for zsh / neovim / tmux
-source $DOTFILES/bootstrap/plugins.sh
+source $DOTFILES/bootstraped/plugins.sh
 
 # install Brewfile / pacmanfile
 if [[ "$os" == "osx" ]]; then
@@ -61,7 +61,7 @@ if [[ "$os" == "osx" ]]; then
 fi
 
 # install repositores
-source $DOTFILES/bootstrap/repositories.sh
+source $DOTFILES/bootstraped/repositories.sh
 
 # download cheatsheet
 source $DOTFILES/cheatsheets/cheatsheet_manager.sh
@@ -70,7 +70,7 @@ source $DOTFILES/cheatsheets/cheatsheet_manager.sh
 if [[ "$os" == "linux" ]]; then
   systemctl enable --now cronie.service
 fi
-source $DOTFILES/bootstrap/crontab.sh
+source $DOTFILES/bootstraped/crontab.sh
 
 # R
 Rscript $DOTFILES/R/package_manager.R
@@ -86,6 +86,7 @@ source $DOTFILES/ruby/gems.sh
 source $DOTFILES/java/javascript/npm.sh
 
 # rust
+cd $DOTFILES/rust/ && ./rustup && cd $HOME
 source $DOTFILES/rust/packages.sh
 
 # passwords
