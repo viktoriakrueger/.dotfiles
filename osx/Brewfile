@@ -83,7 +83,6 @@ brew "ripgrep"
 brew "ruby"
 brew "sd"
 brew "spotify-tui"
-brew "spotifyd", restart_service: true
 brew "starship"
 brew "texlive"
 brew "tmux"
