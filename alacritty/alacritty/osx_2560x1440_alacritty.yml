@@ -2,13 +2,13 @@
 
 font:
   # Point size
-  size: 14.0
+  size: 15.0
 
 window:
 
   dimensions:
-    columns: 250
-    lines: 60
+    columns: 278
+    lines: 68
 
   decorations: buttonless
 

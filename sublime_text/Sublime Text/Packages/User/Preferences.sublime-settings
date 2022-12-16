@@ -8,5 +8,5 @@
 	"font_face": "SauceCodePro Nerd Font",
 	"font_size": 16,
 	"caret_style": "phase",
-	"block_caret": true,
+	"block_caret": false,
 }

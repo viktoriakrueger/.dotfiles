@@ -406,7 +406,7 @@ cursor:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    shape: Block
+    shape: Beam
 
     # Cursor blinking state
     #
@@ -434,7 +434,7 @@ cursor:
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
-  #thickness: 1.0
+  thickness: 0.2
 
 # Live config reload (changes require restart)
 #live_config_reload: true

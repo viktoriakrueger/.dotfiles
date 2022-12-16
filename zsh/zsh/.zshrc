@@ -218,9 +218,7 @@ fi
 pass .
 
 # start spotifyd if its not runnning
-export sptd=$(timeout 1s top | grep -m1 spotifyd | awk '{print $2}')
-
-if [[ "$os" == "osx" && "$sptd" == "" ]]; then
+if [[ "$os" == "osx" && -z $(timeout 1s top | grep -m1 spotifyd | awk '{print $2}') ]]; then
 
   spotifyd
 

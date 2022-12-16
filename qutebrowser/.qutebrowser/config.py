@@ -137,10 +137,6 @@ c.auto_save.session = True
 # scroll with mousewheel tabs type:bool
 config.set('tabs.mousewheel_switching', False)
 
-# keybinding for password manager 'pass'
-config.bind('p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
-config.bind('P', 'spawn --userscript qute-pass --dmenu-invocation dmenu --password-only')
-
 # magnets home
 # c.url.start_pages = ('~/.dotfiles/qutebrowser/.qutebrowser/search/startpage.html')
 
@@ -151,10 +147,10 @@ c.downloads.remove_finished = 1
 c.content.pdfjs = True
 
 # default 'startpage.com' startpage
-
 c.url.default_page = ('https://www.startpage.com/do/mypage.pl?prfe=a44f4a9cfee82fddce2e487e31cdb9d7a00fccb7548af69c104a99d89188eb44ca1bc929ebc56e9035fc9235831071f69ee55eb4dabedc2ab4d5609bb68c54c7988c20df10ae4ced40347d')
 c.url.start_pages = ('https://www.startpage.com/do/mypage.pl?prfe=a44f4a9cfee82fddce2e487e31cdb9d7a00fccb7548af69c104a99d89188eb44ca1bc929ebc56e9035fc9235831071f69ee55eb4dabedc2ab4d5609bb68c54c7988c20df10ae4ced40347d')
 
+# set searchengines
 c.url.searchengines = {
  'DEFAULT': 'https://www.startpage.com/sp/search?query={}',
  'yt': 'https://www.youtube.com/results?search_query={}',
@@ -169,16 +165,7 @@ c.url.searchengines = {
  'urban': 'https://www.urbandictionary.com/define.php?term={}',
  'ebay': 'https://www.ebay.de/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={}&_sacat=0'
  #'':
-
 }
-
-###### darkmode
-config.set("colors.webpage.darkmode.enabled", True)
-
-# dracula css
-# c.content.user_stylesheets = '~/Dropbox/.config/.qutebrowser/css/dracula_for_stackoverflow.user.css'
-
-# config.bind('<Ctrl-R>', 'config-cycle content.user_stylesheets "~/Dropbox/.config/.qutebrowser/css/dracula_for_stackoverflow.user.css" ""')
 
 # paywall
 c.aliases = {
@@ -261,26 +248,23 @@ c.content.blocking.method = 'both'
 # keybindings                                                                  #
 ################################################################################
 
-# keybinding view videos with mpv
+# view videos with mpv
 config.bind('M', 'hint links spawn /usr/bin/env mpv {hint-url}')
 config.bind("Y", "spawn --userscript youtube_mp3_downloader.sh")
 config.bind("X", "spawn --userscript youtube_downloader.sh")
 
+# userscripts
 config.bind('e', 'spawn --userscript dictcc')
 config.bind('E', 'spawn --userscript readability')
 config.bind('W', 'spawn --userscript wiki')
 config.bind('z', 'spawn --userscript duden')
 
-# keybindings navigation
-
-# close tabs qith q
-# config.bind('q', 'tab-close')
+# keybinding for password manager 'pass'
+config.bind('p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
+config.bind('P', 'spawn --userscript qute-pass --dmenu-invocation dmenu --password-only')
 
 # open a new tab with t
 config.bind('t', 'open -t')
-
-# toogle darkmode
-#config.bind('', 'config-cycle colors.webpage.darkmode.enabled ;; restart')
 
 # # Default font families to use. Whenever "default_family" is used in a
 # # font setting, it's replaced with the fonts listed here. If set to an
@@ -311,8 +295,19 @@ config.bind('t', 'open -t')
 # # Type: Font
 # c.fonts.statusbar = '11pt "Source Code Pro"'
 
+# set darkmode darkmode
+config.set("colors.webpage.darkmode.enabled", True)
+
+# toogle darkmode
+#config.bind('', 'config-cycle colors.webpage.darkmode.enabled ;; restart')
+
+# dracula css
+# c.content.user_stylesheets = '~/Dropbox/.config/.qutebrowser/css/dracula_for_stackoverflow.user.css'
+
+# config.bind('<Ctrl-R>', 'config-cycle content.user_stylesheets "~/Dropbox/.config/.qutebrowser/css/dracula_for_stackoverflow.user.css" ""')
+
 ################################################################################
-# color theme #
+# color theme                                                                  #
 ################################################################################
 
 import dracula.draw
