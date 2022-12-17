@@ -91,9 +91,12 @@ source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 source $ZDOTDIR/zsh-autopair/autopair.zsh
+source $ZDOTDIR/ohmyzsh/plugins/web-search/web-search.plugin.zsh
+source $ZDOTDIR/ohmyzsh/lib/functions.zsh
 
 # functions
 source $DOTFILES/zsh/zsh/functions.zsh
+source $ZDOTDIR/ohmyzsh/lib/functions.zsh
 
 # fzf
 if [[ "$os" == "osx" ]]; then
@@ -140,6 +143,9 @@ HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
+
+# enable zmv
+autoload zmv
 
 ####################################################################################
 # keyboard                                                                         #

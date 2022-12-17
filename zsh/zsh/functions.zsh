@@ -1,5 +1,5 @@
 ba() {
- cd $HOME/repositories/ba_thesis && nvim -c ':NvimTreeOpen' '+:e bib/literature.bib'
+ cd $HOME/repositories/ba_thesis && nvim -c ':e bib/literature.bib' '+:NvimTreeOpen'
 }
 
 ######################################################################
