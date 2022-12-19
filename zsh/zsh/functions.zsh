@@ -319,3 +319,4 @@ ssh_viki(){
   pass .
   ssh "$(pass ssh/viki_thinkpad)"
 }
+
