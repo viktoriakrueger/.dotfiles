@@ -48,11 +48,6 @@ alias gitpullall="find . -maxdepth 300 -name .git -type d | rev | cut -c 6- | re
 
 ######################################################################
 
-# bat out .password-store repo
-passwort(){
-    pass | bat
-}
-
 # ls darcula
 alias ls="colorls --dark"
 
@@ -78,6 +73,22 @@ ll(){
 # get easy keyboard hex codes
 hex(){
     xxd -psd
+}
+
+# start spotifyd if its not runnning
+spt(){
+
+if [[ "$os" == "osx" && -z $(timeout 1s top | grep -m1 spotifyd | awk '{print $2}') ]]; then
+
+  spotifyd
+  spt
+
+else
+
+  spt
+
+fi
+
 }
 
 # check weather in $1 location
