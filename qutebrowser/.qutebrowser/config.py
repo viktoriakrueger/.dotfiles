@@ -147,8 +147,8 @@ c.downloads.remove_finished = 1
 c.content.pdfjs = True
 
 # default 'startpage.com' startpage
-c.url.default_page = ('https://www.startpage.com/do/mypage.pl?prfe=a44f4a9cfee82fddce2e487e31cdb9d7a00fccb7548af69c104a99d89188eb44ca1bc929ebc56e9035fc9235831071f69ee55eb4dabedc2ab4d5609bb68c54c7988c20df10ae4ced40347d')
-c.url.start_pages = ('https://www.startpage.com/do/mypage.pl?prfe=a44f4a9cfee82fddce2e487e31cdb9d7a00fccb7548af69c104a99d89188eb44ca1bc929ebc56e9035fc9235831071f69ee55eb4dabedc2ab4d5609bb68c54c7988c20df10ae4ced40347d')
+c.url.default_page = ('https://www.startpage.com/do/mypage.pl?prfe=74cead48198f2f7ccc2bd6751e029339d7411397caac10215f327b59d6922a278d19c471ea5f6c5f07f219f8c11cd753926d4b7f28a8bf4ac2f41849009401f9cfeedc7622e1a61de2a2c8')
+c.url.start_pages = ('https://www.startpage.com/do/mypage.pl?prfe=74cead48198f2f7ccc2bd6751e029339d7411397caac10215f327b59d6922a278d19c471ea5f6c5f07f219f8c11cd753926d4b7f28a8bf4ac2f41849009401f9cfeedc7622e1a61de2a2c8')
 
 # set searchengines
 c.url.searchengines = {
