@@ -226,6 +226,6 @@ pass .
 # start spotifyd if its not runnning
 if [[ "$os" == "osx" && -z $(timeout 1s top | grep -m1 spotifyd | awk '{print $2}') ]]; then
 
- /usr/local/opt/spotifyd/bin/spotifyd --no-daemon --backend portaudio
-
+ spotifyd
+ 
 fi

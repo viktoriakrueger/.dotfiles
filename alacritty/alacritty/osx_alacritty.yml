@@ -9,7 +9,7 @@ shell:
   args:
    - --login
    - -c
-   - "tmux attach || tmux ; pkill spotifyd"
+   - "tmux attach || tmux ; pkill spotifyd ; pkill spt"
 
 import:
   - ~/.dotfiles/alacritty/alacritty/alacritty.yml
