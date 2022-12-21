@@ -8,25 +8,14 @@
 
 ## Installation
 
-### osx: 
+### osx:
 
-*I recommend install qutebrowser twice!*
-
-1. Virtual Environment
-
-`cd ~/ && git clone https://github.com/qutebrowser/qutebrowser.git && cd qutebrowser && python3 scripts/mkvenv.py && rm -rf ~/qutebrowser`
-
-2. As a Application
-
-`cd ~/ && wget https://github.com/qutebrowser/qutebrowser/releases/download/v2.4.0/qutebrowser-2.4.0.dmg && hdiutil attach qutebrowser-2.4.0.dmg && cp -R /Volumes/qutebrowser && qutebrowser.app /Applications && rm qutebrowser-2.4.0.dmg
-`
+`brew install qutebrowser`
 
 - copy userscripts
 
 `cp -r ~/.dotfiles/qutebrowser/.qutebrowser/userscripts ~/Library/Application\ Support/qutebrowser`
 
-*I do not recommend installing the brew version of qutebrowser as it did not work for me*
-
-### arch linux: 
+### arch linux:
 
 `sudo pacman -S qutebrowser`
