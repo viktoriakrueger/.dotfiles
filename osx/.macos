@@ -16,7 +16,8 @@ osascript -e 'tell application "System Preferences" to quit'
 # scutil --set LocalHostName "user"
 
 # copy workflows
-cp ~/.dotfiles/osx/open_terminal.workflow ~/Library/Services
+cp -r $HOME/.dotfiles/osx/Library/Services/alacritty.workflow $HOME/Library/Services/alacritty.workflow
+cp -r $HOME/.dotfiles/osx/Library/Services/qutebrowser.workflow $HOME/Library/Services/qutebrowser.workflow
 
 # set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en"
@@ -91,8 +92,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # screenshots
-mkdir ~/screenshots
-defaults write com.apple.screencapture location ~/screenshots/
+mkdir $HOME/screenshots
+defaults write com.apple.screencapture location $HOME/screenshots/
 
 # disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -246,7 +247,7 @@ sudo cp $DOTFILES/osx/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist $HO
 launchctl load $HOME/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist
 
 # xkswitch keyboardlayout switcher
-cp ~/.dotfiles/osx/usr/local/bin/xkbswitch /usr/local/bin
+cp $DOTFILES/osx/usr/local/bin/xkbswitch /usr/local/bin
 
 ###############################################################################
 

@@ -826,7 +826,8 @@ key_bindings:
 # open qutebrowser workaround
   - { key: E,    mods: Command, chars: "\x63\x6c\x65\x61\x72\x0a\x62\x61\x74\x20\x7e\x2f\x75\x72\x6c\x73\x0a"                       }
 
-# open link  alt+1=1, 2=2, 3...
+  ## open link  alt+1=1, 2=2, 3...
+
   - { key: Key1,    mods: Alt, chars: "\x06\x75\x0a\x0a\x71"                       }
   - { key: Key2,    mods: Alt, chars: "\x06\x75\x32\x0a\x0a\x0a\x71"                      }
   - { key: Key3,    mods: Alt, chars: "\x06\x75\x33\x0a\x0a\x0a\x71"                      }

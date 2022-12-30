@@ -181,6 +181,10 @@ keychron(){
   blueutil -p 1 && blueutil --connect $(pass bluetooth/keychronk2)
 }
 
+logi(){
+  blueutil -p 1 && blueutil --connect $(pass bluetooth/zonevibe100)
+}
+
 if [[ "$os" == "osx" ]]; then
 
 audiomidisetup(){
