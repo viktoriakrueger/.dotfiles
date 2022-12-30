@@ -17,8 +17,9 @@ ___
 
 1. go to System Preferences
 2. Keyboard > Shortcuts > Spotlight > uncheck
-3. doubleclick 'open_terminal.workflow'
+3. doubleclick 'alacritty.workflow'
 4. Services > map workflow to cmd + space
+5. same for qutebrowser `"cmd+<'>"`
 ___
 
 ### screenrecord w/ audio
