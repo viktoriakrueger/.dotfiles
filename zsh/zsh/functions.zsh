@@ -20,7 +20,7 @@ push-dots(){
 
 # open this file
 funs(){
-    vim $DOTFILES/zsh/zsh/functions.zsh
+    nvim $DOTFILES/zsh/zsh/functions.zsh
 }
 
 update(){
@@ -86,15 +86,10 @@ weather(){
 }
 
 # open neomutt
-mutt() {
-    stty discard undef
-    neomutt
-}
+alias mutt="stty discard undef && neomutt"
 
 # open neovim
-vim(){
-   nvim $1
-}
+alias vim="nvim"
 
 # open w3m terminal browser
 w3mb(){

@@ -132,3 +132,8 @@ keymap("n", "<leader>G", ":lua require(\"harpoon.ui\").nav_prev()<cr>", opts)
 -- easymotion -
 -----------------------------------------------------------------------
 vim.cmd('map <Leader><Leader> <Plug>(easymotion)')
+
+-----------------------------------------------------------------------
+-- outline toc for markdown -
+-----------------------------------------------------------------------
+keymap("n", "T", ":vimgrep '^\\#' % | cw<cr>", opts)
