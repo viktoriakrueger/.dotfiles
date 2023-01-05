@@ -24,6 +24,7 @@ duti -s com.sublimetext.4 .csl all
 duti -s com.sublimetext.4 .tex all
 duti -s com.sublimetext.4 .sty all
 duti -s com.sublimetext.4 .tmux.conf all
+duti -s com.sublimetext.4 .toml all 
 duti -s com.sublimetext.4 .css all
 duti -s com.sublimetext.4 .cfg all
 duti -s com.sublimetext.4 .snippets all
