@@ -4,13 +4,13 @@
 #osascript -e 'id of app "Visual Studio Code"'
 
 # sublime
-duti -s com.sublimetext.4 .txt all 
-duti -s com.sublimetext.4 .md all 
+duti -s com.sublimetext.4 .txt all
+duti -s com.sublimetext.4 .md all
 duti -s com.sublimetext.4 .rmd all
-duti -s com.sublimetext.4 .r all 
+duti -s com.sublimetext.4 .r all
 duti -s com.sublimetext.4 .sh all
 duti -s com.sublimetext.4 .lua all
-duti -s com.sublimetext.4 .macos all 
+duti -s com.sublimetext.4 .macos all
 duti -s com.sublimetext.4 .yml all
 duti -s com.sublimetext.4 .py all
 duti -s com.sublimetext.4 .conf all
@@ -24,7 +24,7 @@ duti -s com.sublimetext.4 .csl all
 duti -s com.sublimetext.4 .tex all
 duti -s com.sublimetext.4 .sty all
 duti -s com.sublimetext.4 .tmux.conf all
-duti -s com.sublimetext.4 .toml all 
+duti -s com.sublimetext.4 .toml all
 duti -s com.sublimetext.4 .css all
 duti -s com.sublimetext.4 .cfg all
 duti -s com.sublimetext.4 .snippets all
@@ -38,7 +38,6 @@ duti -s org.libreoffice.script .doc all
 duti -s org.libreoffice.script .pptx all
 duti -s org.libreoffice.script .xlsx all
 duti -s org.libreoffice.script .xls all
-
 
 # qview
 duti -s com.interversehq.qView .jpg all
@@ -78,3 +77,4 @@ duti -s org.videolan.vlc .webm all
 duti -s org.videolan.vlc .svi all
 duti -s org.videolan.vlc .avi all
 duti -s org.videolan.vlc .flv all
+duti -s org.videolan.vlc .m3u all
