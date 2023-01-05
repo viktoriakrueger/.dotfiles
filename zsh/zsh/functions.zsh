@@ -274,6 +274,18 @@ wifi-connect(){
   networksetup -setairportnetwork en0 $1 $2
 }
 
+spt(){
+
+  if [[ "$os" == "osx" && -z $(timeout 1s top | grep -m1 spotifyd | awk '{print $2}') ]]; then
+    /usr/local/bin/spotifyd
+    /usr/local/bin/spt $@
+
+  else
+    /usr/local/bin/spt $@
+
+  fi
+}
+
 ######################################################################
 fi
 
