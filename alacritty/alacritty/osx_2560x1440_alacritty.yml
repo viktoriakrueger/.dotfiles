@@ -7,8 +7,8 @@ font:
 window:
 
   dimensions:
-    columns: 278
-    lines: 68
+    columns: 255
+    lines: 65
 
   decorations: buttonless
 

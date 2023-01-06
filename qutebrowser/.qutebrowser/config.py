@@ -150,18 +150,20 @@ c.auto_save.session = True
 # scroll with mousewheel tabs type:bool
 config.set('tabs.mousewheel_switching', False)
 
-# magnets home
-# c.url.start_pages = ('~/.dotfiles/qutebrowser/.qutebrowser/search/startpage.html')
-
 # how long will the downloads files apear in a tab (milliseconds)
 c.downloads.remove_finished = 1
+
+# magnets home
+
+c.url.default_page = ('~/.qutebrowser/startpages/search/startpage.html')
+c.url.start_pages = ('~/.qutebrowser/startpages/search/startpage.html')
 
 # open instant pdf
 c.content.pdfjs = True
 
 # default 'startpage.com' startpage
-c.url.default_page = ('https://www.startpage.com/do/mypage.pl?prfe=74cead48198f2f7ccc2bd6751e029339d7411397caac10215f327b59d6922a278d19c471ea5f6c5f07f219f8c11cd753926d4b7f28a8bf4ac2f41849009401f9cfeedc7622e1a61de2a2c8')
-c.url.start_pages = ('https://www.startpage.com/do/mypage.pl?prfe=74cead48198f2f7ccc2bd6751e029339d7411397caac10215f327b59d6922a278d19c471ea5f6c5f07f219f8c11cd753926d4b7f28a8bf4ac2f41849009401f9cfeedc7622e1a61de2a2c8')
+# c.url.default_page = ('https://www.startpage.com/do/mypage.pl?prfe=74cead48198f2f7ccc2bd6751e029339d7411397caac10215f327b59d6922a278d19c471ea5f6c5f07f219f8c11cd753926d4b7f28a8bf4ac2f41849009401f9cfeedc7622e1a61de2a2c8')
+# c.url.start_pages = ('https://www.startpage.com/do/mypage.pl?prfe=74cead48198f2f7ccc2bd6751e029339d7411397caac10215f327b59d6922a278d19c471ea5f6c5f07f219f8c11cd753926d4b7f28a8bf4ac2f41849009401f9cfeedc7622e1a61de2a2c8')
 
 # set searchengines
 c.url.searchengines = {
