@@ -1,29 +1,29 @@
-IMAPAccount posteo
-Host posteo.de
+IMAPAccount icloud
+Host imap.mail.me.com
 Port 993
-User aleksej.chaichan@posteo.de
-PassCmd "/usr/local/bin/pass posteo.de/aleksej.chaichan@posteo.de"
+User viki_krueger@yahoo.de
+PassCmd "pass mbsyncrc"
 # Pass xxxx-xxxx-xxxx-xxxx
 SSLType IMAPS
 #CertificateFile /usr/local/etc/openssl@1.1/cert.pem
 AuthMechs PLAIN
 
-IMAPStore posteo-remote
-Account posteo
+IMAPStore icloud-remote
+Account icloud
 
-MaildirStore posteo-local
+MaildirStore icloud-local
 Path ~/mail/
 Inbox ~/mail/INBOX
 Trash Trash
 
-Channel posteo-folders
-Far :posteo-remote:
-Near :posteo-local:
+Channel icloud-folders
+Far :icloud-remote:
+Near :icloud-local:
 Patterns "INBOX"
 Create Both
 Expunge Both
 Patterns *
 SyncState *
 
-Group posteo
-Channel posteo-folders
+Group icloud
+Channel icloud-folders

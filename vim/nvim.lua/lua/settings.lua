@@ -1,4 +1,6 @@
 HOME = os.getenv("HOME")
+-- set language
+--vim.api.nvim_exec ('language en_US', true) --dosent work on arch linux
 
 -- basic settings
 vim.o.encoding = "utf-8"
@@ -67,13 +69,9 @@ vim.o.swapfile = false -- do not use swap file
 -- vim.o.backupdir = HOME .. '/.vim/tmp/backup//' -- backups
 -- vim.o.directory = '/.vim/tmp/swap//' -- swap files
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 vim.cmd([[
  au FileType python set ts=4 sw=4
  au BufRead,BufNewFile *.md set ft=mkd tw=80 syntax=markdown
- au BufRead,BufNewFile *.rmd set ft=mkd tw=80 syntax=markdown
  au BufRead,BufNewFile *.ppmd set ft=mkd tw=80 syntax=markdown
  au BufRead,BufNewFile *.markdown set ft=mkd tw=80 syntax=markdown
  au BufRead,BufNewFile *.slimbars set syntax=slim
@@ -95,12 +93,13 @@ vim.cmd([[
 ]])
 
 -- minimap
+
 vim.cmd('let g:minimap_auto_start = 0')
 vim.cmd('let g:minimap_auto_start_win_enter = 0')
 
 -- colorscheme
 vim.cmd('set t_Co=256')
-vim.opt.termguicolors = true
+vim.cmd('set termguicolors')
 vim.cmd('colorscheme dracula')
 vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 
@@ -114,3 +113,4 @@ vim.cmd('call nvim_create_user_command(\'PlugUpdate\', \'! cd $VDOTDIR/pack/plug
 
 -- render function for .rmd
 vim.cmd('call nvim_create_user_command(\'Render\', \'! R -e \"rmarkdown::render(\\"`realpath %`\\")\" && FILE=\"`realpath %`\" && tmux neww zathura ${FILE/rmd/pdf} && tmux last-window \', {})')
+

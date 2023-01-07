@@ -1,0 +1,20 @@
+[calendars]
+  [[privat]]
+    path = ~/.calendars/home/
+    color = yellow
+  [[<3]]
+    path = ~/.calendars/4e9ae31cef430449147b30a387e7889824729f83623c784613003cf49cca2255/
+    color = white
+  [[uni]]
+    path = ~/.calendars/work/
+    color = yellow
+  [[klausuren]]
+    path = ~/.calendars/403DCDE3-DE3C-489C-BB50-9708F35A6669/
+    color = white
+
+[locale]
+timeformat = %H:%M
+dateformat = %Y-%m-%d
+longdateformat = %Y-%m-%d
+datetimeformat = %Y-%m-%d %H:%M
+longdatetimeformat = %Y-%m-%d %H:%M

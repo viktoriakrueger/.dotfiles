@@ -1,0 +1,11 @@
+{
+	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+	"font_face": "SauceCodePro Nerd Font",
+	"font_size": 13,
+	"caret_style": "phase",
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"theme": "Adaptive.sublime-theme",
+}

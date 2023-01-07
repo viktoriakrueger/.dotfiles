@@ -1,0 +1,11 @@
+[Desktop Entry]
+Vesion=1.0
+Type=Application
+Name=icloud
+GenericName=Web App for icloud
+Comment=Web App for icloud
+Icon= apple
+Exec=/home/viki/icloud-linux-x64/icloud
+Cetegories=Internet
+Keywords=internet
+StartupNotify=false

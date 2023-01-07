@@ -74,6 +74,9 @@ keymap("v", "(", "l:s/\\%V\\(.*\\)\\%V/(\\1)/<CR>", opts)
 keymap("v", "[", "l:s/\\%V\\(.*\\)\\%V/[\\1]/<CR>", opts)
 keymap("v", "{", "l:s/\\%V\\(.*\\)\\%V/{\\1}/<CR>", opts)
 
+-- new line after each dot
+keymap("n", ".", ":%s/\\. /.\\r/g<CR>", opts)
+
 -- terminal --
 -- better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
@@ -105,6 +108,9 @@ keymap("i", "µ", "%>%", opts)
 -- functions -
 -----------------------------------------------------------------------
 
+keymap("", "<C-l>", "<Nop>", opts) -- unmap first
+keymap("", "<C-l>", ":Render<CR>", opts) -- quit with ctrl+q
+
 -----------------------------------------------------------------------
 -- nvim-tree -
 -----------------------------------------------------------------------
@@ -120,6 +126,7 @@ keymap("n", "<leader>t", ":Telescope find_files<CR>", opts)
 -----------------------------------------------------------------------
 -- harpoon -
 -----------------------------------------------------------------------
+
 keymap("n", "<leader>H", ":lua require(\"harpoon.mark\").add_file()<cr>", opts)
 keymap("n", "<leader>h", ":lua require(\"harpoon.ui\").toggle_quick_menu()<cr>", opts)
 keymap("n", "<leader>g", ":lua require(\"harpoon.ui\").nav_next()<cr>", opts)
@@ -128,9 +135,5 @@ keymap("n", "<leader>G", ":lua require(\"harpoon.ui\").nav_prev()<cr>", opts)
 -----------------------------------------------------------------------
 -- easymotion -
 -----------------------------------------------------------------------
-vim.cmd('map <Leader><Leader> <Plug>(easymotion)')
 
------------------------------------------------------------------------
--- outline toc for markdown -
------------------------------------------------------------------------
-keymap("n", "T", ":vimgrep '^\\#' % | cw<cr>", opts)
+vim.cmd('map <Leader><Leader> <Plug>(easymotion)')

@@ -1,2 +1,0 @@
-auto-reload yes   # fetch new content when starting program
-reload-time 1    # fetch new content every 10 minutes

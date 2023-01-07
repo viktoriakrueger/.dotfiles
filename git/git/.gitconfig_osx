@@ -1,22 +1,9 @@
-#      ___
-#     /\__\
-#    /:/ _/_       ___           ___
-#   /:/ /\  \     /\__\         /\__\
-#  /:/ /::\  \   /:/__/        /:/  /
-# /:/__\/\:\__\ /::\  \       /:/__/
-# \:\  \ /:/  / \/\:\  \__   /::\  \
-#  \:\  /:/  /   ~~\:\/\__\ /:/\:\  \
-#   \:\/:/  /       \::/  / \/__\:\  \
-#    \::/  /        /:/  /       \:\__\
-#     \/__/         \/__/         \/__/
-
 [user]
-	email = a.chaichan@icloud.com
-	name = alexchaichan
-	signingkey = B50CCA3A30B61127
+  email = viki_krueger@yahoo.de
+  name = vikikrueger
+  signingkey = 9794E69B7C0FA76C
 [core]
-	excludesfile = /Users/user/.dotfiles/git/git/.gitignore_global
-	pager = delta
+  excludesfile = /home/viki/.dotfiles/git/git/.gitignore_global
 [credential]
   helper = !pass-git-helper $@
 # INCLUDES
@@ -24,16 +11,6 @@
 # Local/Private config goes in the include
 [include]
   path = ~/.gitconfig.local
-[interactive]
-    diffFilter = delta --color-only
-[delta]
-    navigate = true
-[merge]
-    conflictstyle = diff3
-[commit]
-	gpgsign = true
-[diff]
-    colorMoved = default
 # URL ALIASES
 # -----------
 # Alias for Dracula Org repositories
@@ -81,3 +58,5 @@
   unmerged = magenta bold reverse
   untracked = red
   updated = green bold
+[commit]
+	gpgsign = true

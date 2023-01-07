@@ -9,11 +9,6 @@ body {
 	padding: 0 30px;
 }
 
-p {
-    margin: 0 0 10px;
-    line-height: 2;
-}
-
 a.headerlink {
   display: none;
   border: none;
@@ -110,7 +105,6 @@ dt {
 
 li {
   color: #f8f8fF;
-  line-height: 2;
 }
 
 .MathJax {

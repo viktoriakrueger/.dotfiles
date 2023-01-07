@@ -1,43 +1,34 @@
-ba() {
- cd $HOME/repositories/ba_thesis && nvim -c ':e bib/literature.bib' '+:NvimTreeOpen'
-}
-
 ######################################################################
-# aliasas						                                                 #
+# aliasas						          #
 ######################################################################
-
-# calcurse pass plugins
-alias calcurse-caldav='CALCURSE_CALDAV_PASSWORD=$(pass show posteo.de/aleksej.chaichan@posteo.de) calcurse-caldav'
-
-# open $DOTDIR repo
-dots(){
-  cd $DOTFILES
-}
-
-push-dots(){
-  cd $DOTFILES && gitpush && cd && cd .password-store && gitpush && cd
-}
 
 # open this file
 funs(){
-    nvim $DOTFILES/zsh/zsh/functions.zsh
+    vim $DOTFILES/zsh/zsh/functions.zsh
 }
 
-update(){
-  if [[ "$os" == "osx" ]]; then
-      sudo -v
-      PlugUpdate && brew update && brew upgrade && brew cleanup && brew outdated && brew cu && sudo softwareupdate -i -a
-  elif [[ "$os" == "linux" ]]; then
-    sudo pacman -Syu
-  fi
+jbl(){
+    bluetoothctl connect F4:BC:DA:F7:EE:57
 }
+
+jbl-box(){
+    bluetoothctl connect 04:FE:A1:FC:D3:5E
+}
+
+keychron(){
+  bluetoothctl connect DC:2C:26:F5:AF:60
+}
+
+logi(){
+  bluetoothctl connect 44:73:D6:A4:50:D8
+}
+
 ######################################################################
-#git 						                                                     #
+#git 						                  #
 ######################################################################
 
 # quick push git
 gitpush(){
-  pass .
   git add .
   git commit -m "update"
   git push
@@ -45,6 +36,10 @@ gitpush(){
 
 # pull all repos start searching from actual directory
 alias gitpullall="find . -maxdepth 300 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull"
+
+update(){
+  sudo pacman -Syyu
+}
 
 ######################################################################
 
@@ -75,36 +70,60 @@ ll(){
     cd ..
 }
 
-# get easy keyboard hex codes
-hex(){
-    xxd -psd
+# check weather in stadard location
+weather(){
+    curl v2d.wttr.in/Kassel
 }
 
 # check weather in $1 location
-weather(){
+wetter(){
     curl v2d.wttr.in/$1
 }
 
 # open neomutt
-alias mutt="stty discard undef && neomutt"
+mutt() {
+    stty discard undef
+    neomutt
+}
+
+# open qutebrowser with $1
+qute(){
+    qutebrowser $1
+}
 
 # open neovim
-alias vim="nvim"
+vim(){
+   nvim $1
+}
 
 # open w3m terminal browser
 w3mb(){
     w3m -B
 }
 
-synchro(){
-    vdirsyncer discover my_contacts
-    #vdirsyncer discover my_calendar
-    vdirsyncer sync
-    mbsync posteo
+# alias for projects
+
+schoko(){
+
+    nvim ~/Dropbox/uni/schokolade
 }
 
-get-ip(){
-  ifconfig | grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}" | grep -v 127.0.0.1 | head -1 | awk '{ print $2 }'
+modeling(){
+    nvim ~/Dropbox/uni/modeling/
+  }
+
+synchro(){
+    vdirsyncer discover my_contacts
+    vdirsyncer discover my_calendar
+    vdirsyncer sync
+}
+
+todo(){
+    vim $DROPBOX/todo.md
+}
+
+odot(){
+    glow $DROPBOX/todo.md
 }
 
 #####################################################
@@ -112,27 +131,28 @@ get-ip(){
 #####################################################
 
 # ZSH functions to start/stop OpenConnect VPN client
-function vpn-uk() {
- pass .
-   if [[ "$?" -eq 0 ]]; then
-     pass show uni-kassel.de/uk069555  | sudo openconnect  --user=uk069555 --passwd-on-stdin https://vpn.uni-kassel.de/ --servercert pin-sha256:cE1Loj4xAFctrQWe/4RdmIdvuIQqeIZrQ1zhkBgW6VM=
-   fi
-  }
+
+function vpn-uk {
+  pass .
+  pass show uni-kassel.de/uk072358 | sudo openconnect --user=uk072358 --passwd-on-stdin https://vpn.uni-kassel.de/ --servercert pin-sha256:cE1Loj4xAFctrQWe/4RdmIdvuIQqeIZrQ1zhkBgW6VM=
+}
+
+function vpn-ba {
+  pass .
+  pass show uni-bamberg.de/ba067629 | sudo openconnect --user=ba067629 --passwd-on-stdin https://vpn3.uni-bamberg.de/ --servercert pin-sha256:AsZquxQE3RlfJdL4dZ0LJn5e1nM5N/JpbS+0wAZfAAk=
+}
 
 function vpn-down() {
   sudo kill -2 `pgrep openconnect`
 }
 
-# connect to the server
-connect(){
-  osascript -e 'tell application "Finder" to open location "smb://smb.uni-kassel.de/vpvs"'
-  osascript -e 'delay 3' -e 'tell application "System Events" to keystroke tab & return & return'
-}
+### function to connect to the hiwi server
+
+# connect(){
+#     osascript ~/Dropbox/.config/connect.scpt
+# }
 
 # disconnect
-disconnect(){
-    umount /Volumes/vpvs
-}
 
 ##########################################################################################################
 #pluginmanager                                                                                           #
@@ -156,29 +176,47 @@ function tmux_add_plugin() {
   git clone "https://github.com/$1.git" "$TDOTDIR/plugins/$PLUGIN_NAME"
 }
 
-function PlugUpdate(){
-  cd $VDOTDIR/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $ZDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $TDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd
+alias PlugUpdate="cd $VDOTDIR/pack/plugins/start && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $ZDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd && cd $TDOTDIR && find . -maxdepth 3 -name .git -type d | rev | cut -c 6- | rev | xargs -I {} git -C {} pull ; cd"
+
+##########################################################################################################
+# templates                                                                                              #
+##########################################################################################################
+
+# when its come to create markdown documents use this
+
+# 1st link, when want to sent it push it do 2nd copie
+
+links(){
+    rm -rf wordcount.lua literature.bib styles .Rprofile && ln -sf ~/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && ln -sf $DOTFILES/styles "$(pwd)" && ln -sf $DROPBOX/googlebox/literature.bib "$(pwd)" && ln -sf $DOTFILES/R/.Rprofile "$(pwd)"
+}
+
+copies(){
+rm -rf wordcount.lua literature.bib styles .Rprofile && cp $HOME/.local/share/pandoc/filters/wordcount/wordcount.lua "$(pwd)" && cp -rf $DOTFILES/styles "$(pwd)" && cp $DROPBOX/googlebox/literature.bib "$(pwd)" && cp $DOTFILES/R/.Rprofile "$(pwd)"
+}
+
+pdf(){
+    cp $DOTFILES/Templates/pdf.rmd "$(pwd)"
+}
+
+html(){
+    cp $DOTFILES/Templates/html.rmd "$(pwd)"
+}
+
+letter(){
+    cp $DOTFILES/Templates/letter.rmd "$(pwd)"
+}
+
+pptx(){
+    cp $DOTFILES/Templates/pptx.rmd "$(pwd)"
+}
+
+word(){
+    cp $DOTFILES/Templates/word.rmd "$(pwd)"
 }
 
 #####################################################
 # zsh functions mac                                 #
 #####################################################
-
-applemouse(){
-  blueutil -p 1 && blueutil --connect $(pass bluetooth/applemouse)
-}
-
-jbl-box(){
-  blueutil -p 1 && blueutil --connect $(pass bluetooth/jbl-box)
-}
-
-keychron(){
-  blueutil -p 1 && blueutil --connect $(pass bluetooth/keychronk2)
-}
-
-logi(){
-  blueutil -p 1 && blueutil --connect $(pass bluetooth/zonevibe100)
-}
 
 if [[ "$os" == "osx" ]]; then
 
@@ -210,10 +248,6 @@ firefox(){
     /usr/bin/open -a Firefox $1
 }
 
-skim(){
-    /usr/bin/open -a Skim $1
-}
-
 diskutility(){
     /usr/bin/open -a "Disk Utility"
 }
@@ -228,6 +262,10 @@ json(){
 
 plist(){
     /usr/bin/open -a "PLIST Editor"
+}
+
+powerpoint(){
+    /usr/bin/open -a "Microsoft PowerPoint" $1
 }
 
 dropbox(){
@@ -254,45 +292,52 @@ preview(){
     /usr/bin/open -a Preview $1
 }
 
+pycharm(){
+    /usr/bin/open -a 'pycharm CE' $1
+}
+
 rstudio(){
     /usr/bin/open -a Rstudio $1
 }
 
-mails(){
-    /usr/bin/open -a Mail
-}
-
-amphetamine(){
-  /usr/bin/open -a Amphetamine
-}
-
-calendar(){
-  /usr/bin/open -a Calendar
-}
-
-wifi-scan(){
-  /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
-}
-
-wifi-connect(){
-  networksetup -setairportnetwork en0 $1 $2
-}
-
-spt(){
-
-  if [[ "$os" == "osx" && -z $(timeout 1s top | grep -m1 spotifyd | awk '{print $2}') ]]; then
-    /usr/local/bin/spotifyd
-    /usr/local/bin/spt $@
-
-  else
-    /usr/local/bin/spt $@
-
-  fi
-}
-
 ######################################################################
-fi
 
+# update & upgrade brew
+update(){
+    brew update && brew upgrade && brew cleanup && brew outdated && brew cu
+}
+
+# zsh functions to start/stop OpenConnect VPN client
+
+# define vpn host
+export VPN_HOST=https://vpn.uni-kassel.de/
+
+function vpn-up() {
+  if [[ -z $VPN_HOST ]]
+  then
+    echo "Please set VPN_HOST env var"
+    return
+  fi
+  echo "Starting the vpn ..."
+  sudo openconnect  --user=uk069555 --servercert pin-sha256:Aq5S0+QpnxCg3f/QopnL9bvJA09x1c1mmEhH79quzng= $VPN_HOST
+}
+
+function vpn-down() {
+  sudo kill -2 `pgrep openconnect`
+}
+
+### osa script to connect to the hiwi server
+
+# connect(){
+#     osascript ~/Dropbox/.config/connect.scpt
+# }
+
+# disconnect from hiwi server
+disconnect(){
+    umount /Volumes/Chaichan ; umount /Volumes/uk069555
+}
+
+fi
 #####################################################
 # zsh functions linux                               #
 #####################################################
@@ -301,12 +346,19 @@ if [[ "$os" == "linux" ]]; then
 
 # set the display on the imac to 100%
 licht(){
-   brightnessctl set 100%
+  redshift -l 45:5 -t 6500:6500 -b $1
+}
+licht2(){
+  sudo ddcutil setvcp 10 $1
 }
 
 # connect magic mous
 mm(){
     bluetoothctl connect 04:4B:ED:D2:45:CF
+}
+
+rec(){
+recordmydesktop --no-wm-check --device pulse -o $1
 }
 
 clear(){
@@ -315,11 +367,6 @@ clear(){
 
 fi
 
-#####################################################
-# ssh                                               #
-#####################################################
-
-ssh_viki(){
-  pass .
-  ssh "$(pass ssh/viki_thinkpad)"
+speak(){
+  espeak -v $1 -s 140 $2
 }

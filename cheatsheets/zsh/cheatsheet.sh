@@ -9,37 +9,23 @@ zip -r FILENAME.zip /PATH/TO/DIR/*
 
 # unzip
 
-# split file by lines into smaller files
-split -l n /path/to/file
 
-# change extension name
-for f in *; do mv -- "$f" "${f}.extension"; done
+# zip / unzip
+unzip ~/location/file.zip -d ~/location/
 
-# mass rename
-zmv '(*).(jpg|jpeg)' 'epcot-$1.$2'
+update #system update
 
-# download all pdfs fro a webpage
-var=$(lynx --dump LINK_HERE_WITHOUT_QUOTES | grep ".*\.pdf$"  | awk '/http/{print $2}') | echo $var | for i in $(echo $var); do wget $i; done
+alt+w # close window
+alt+t # new tab
+alt+d # vertical split
+alt+shift+d # horizontal split
 
-# see all available wifi connections
-wifi-scan
-/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
+strg+shift+v # paste
 
-# connect ti wifi
-wifi-connect
-networksetup -setairportnetwork en0 <SSID_OF_NETWORK> <PASSWORD>
+strg+l # clear
+strg+c # quit process
 
-# colorls
--1
--a (or) --all
--A (or) --almost-all
--d (or) --dirs
--f (or) --files
--h (or) --help
--l (or) --long
--r (or) --report
---tree (or) --tree=[DEPTH]
---gs (or) --git-status
---sd (or) --sort-dirs or --group-directories-first
---sf (or) --sort-files
--t
+rec $FILENAME # record # saved in $HOME
+
+# verknüpfung
+ln -sf ~/path/to/directory ~/path/to/location/name_of_file.

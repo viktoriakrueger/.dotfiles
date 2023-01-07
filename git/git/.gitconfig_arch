@@ -1,9 +1,9 @@
 [user]
-	email = a.chaichan@icloud.com
-	name = alexchaichan
-	signingkey = B50CCA3A30B61127
+	email = viki_krueger@yahoo.de
+	name = vikikrueger
+	signingkey = 9794E69B7C0FA76C
 [core]
-	excludesfile = /home/imac/.dotfiles/git/git/.gitignore_global
+	excludesfile = /home/viki/.dotfiles/git/git/.gitignore_global
 [credential]
   helper = !pass-git-helper $@
 # INCLUDES

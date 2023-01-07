@@ -2,16 +2,16 @@
     "initial_working_directory": "~",
     "editor_theme": "Dracula",
     "posix_terminal_shell": "zsh",
-    "jobs_tab_visibility": "shown",
+    "jobs_tab_visibility": "closed",
     "show_margin": false,
-    "default_project_location": "~/repositories",
+    "default_project_location": "~/",
     "source_with_echo": true,
     "soft_wrap_r_files": true,
     "cran_mirror": {
-        "name": "Global (CDN)",
-        "host": "RStudio",
-        "url": "https://cran.rstudio.com/",
-        "country": "us",
+        "name": "Germany (Münster) [https]",
+        "host": "University of Münster, Germany",
+        "url": "https://cran.uni-muenster.de/",
+        "country": "de",
         "ok": 1,
         "secondary": ""
     },
@@ -21,10 +21,7 @@
     "rmd_viewer_type": "none",
     "global_theme": "alternate",
     "terminal_initial_directory": "home",
-    "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/vitae/rmarkdown/templates/latexcv",
-    "show_hidden_files": true,
-    "python_type": "system",
-    "python_version": "3.9.16",
-    "python_path": "/usr/local/bin/python3.9",
-    "font_size_points": 11
+    "rmd_preferred_template_path": "/Library/Frameworks/R.framework/Versions/4.2/Resources/library/rticles/rmarkdown/templates/isba",
+    "show_terminal_tab": false,
+    "pdf_previewer": "none"
 }

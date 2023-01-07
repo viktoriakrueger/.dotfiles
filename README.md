@@ -1,10 +1,6 @@
 # dotfiles
 
-## for windows (cygwin):
-- install [cygwin](https://cygwin.com/setup-x86_64.exe)
-- pick `wget`
-
-## package manager
+## package installer
 
 ```
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -32,38 +28,23 @@ elif [[ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ]]; then
 fi
 ```
 
-## clone `.dotfiles`
+# clone `.dotfiles` & `.password-store`
+`git clone https://github.com/vikikrueger/.dotfiles.git ~/.dotfiles`
 
-`git clone https://github.com/alexchaichan/.dotfiles.git ~/.dotfiles`
+`git clone https://github.com/vikikrueger/.password-store.git ~/.password-store`
 
-## store [`.password-store`](https://github.com/alexchaichan/.password-store/archive/refs/heads/main.zip) into `~/`
-
-`unzip ~/Downloads/.password-store-main.zip -d ~/Downloads && mv ~/Downloads/.password-store-main ~/.password-store/`
-
-## store [`.gnupg`](https://drive.proton.me/urls/1K1QVY03ZC#8nRtoDHTIi6J) into `~/`
-
-```
-unzip ~/Downloads/gnupg.zip -d ~/Downloads/ && mv ~/Downloads/gnupg ~/.gnupg
-```
-
-## store [`.ssh`](https://drive.proton.me/urls/ZMK4QJ66H4#OTp4ouSzq31D) into `~/`
-
-```
-unzip ~/Downloads/ssh.zip -d ~/Downloads/ && mv ~/Downloads/ssh ~/.ssh
-```
+## store `.gnupg` repo into `~/`
 
 ## run installation file
 
-`cd ~/.dotfiles && ./bootstrap`
+`source ~/.dotfiles/bootstrap.sh`
 
-<!-- ## calcurse config -->
-<!---->
-<!-- ``` -->
-<!-- calcurse-caldav --init=two-way -->
-<!---->
-<!-- ln -sf ~/Dropbox/iphone/todo ~/.calcurse -->
-<!-- ``` -->
+### run light version
 
-### cygwin
+`source ~/.dotfiles/light.sh`
+
+## for windows:
+- install [cygwin](https://cygwin.com/setup-x86_64.exe)
+- pick `wget`
 
 `source ~/.dotfiles/windows/cygwin.sh`

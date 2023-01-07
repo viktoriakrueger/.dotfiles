@@ -1,5 +1,9 @@
-# [R](https://www.r-project.org/)
+falls es probleme mit rstudio gibt:
 
-R is a free software environment for statistical computing and graphics. It compiles and runs on a wide variety of UNIX platforms, Windows and MacOS
+`zsh rstudio-bin --no-sandbox`
 
-*I use R mainly for Data science*
+den fehlercode evtl googlen
+
+hoffentlich hilft das:
+
+`zsh sudo pacman -S openssl-1.1`

@@ -1,7 +1,5 @@
 ## last steps by hand
 
-___
-
 ### full disk acces to crontabs
 
 1. open preferences and go to "Security & Privacy" -> "Privacy"
@@ -13,30 +11,20 @@ ___
 7. click "Open" It should show up in the list with a check mark next to it.
 ___
 
-### remove standard hotkey `"cmd+<space>"`
+### remove standard hotkey `cmd+<space>`
 
 1. go to System Preferences
 2. Keyboard > Shortcuts > Spotlight > uncheck
-3. doubleclick 'alacritty.workflow'
-4. Services > map workflow to cmd + space
-5. same for qutebrowser `"cmd+<'>"`
+3. Services > map workflow to cmd + space
 ___
 
 ### screenrecord w/ audio
 
 `audiomidisetup`
 
-1. click "+" button > Create Aggregated Device > name it "quicktime player input" > check BlackHole 16ch
-2. click "+" button > Create Multi-Output Device > name it "screen record w/ auio" > check Built-In Output (must be on top!) + BlackHole 16ch
-3. record screen with "screen record w/ audio"
+- click "+" button > Create Aggregated Device > name it "quicktime player input" > check BlackHole 16ch
+
+- click "+" button > Create Multi-Output Device > name it "screen record w/ auio" > check Built-In Output (must be on top!) + BlackHole 16ch
+
+- record screen with "screen record w/ audio"
 ___
-
-### posteo mail / carddav / caldav
-
-email address: ****@**.**
-
-user name: ******
-
-password: *****
-incoming mail server: posteo.de
-outgoing mail server: posteo.de

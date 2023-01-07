@@ -1,0 +1,11 @@
+[Desktop Entry]
+Vesion=1.0
+Type=Application
+Name=yahoo
+GenericName=Web App for yahoo-mail
+Comment=Web App for yahoo-mail
+Icon=mail
+Exec=/home/viki/yahoo-mail-linux-x64/yahoo-mail
+Cetegories=Internet
+Keywords=internet
+StartupNotify=false

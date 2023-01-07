@@ -3,21 +3,28 @@
 # thanks to Mathias Bynens!
 # ~/.macos — https://mths.be/macos
 
-# close any open system preferences panes, to prevent them from overriding settings we’re about to change
+# close any open system preferences panes, to prevent them from overriding
+# settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
 ###############################################################################
 # general UI/UX                                                               #
 ###############################################################################
 
-# set computer name (as done via System Preferences → Sharing)
+# # set computer name (as done via System Preferences → Sharing)
 # scutil --set ComputerName "usersmacbook"
 # scutil --set HostName "user"
 # scutil --set LocalHostName "user"
 
 # copy workflows
-cp -r $HOME/.dotfiles/osx/Library/Services/alacritty.workflow $HOME/Library/Services/alacritty.workflow
-cp -r $HOME/.dotfiles/osx/Library/Services/qutebrowser.workflow $HOME/Library/Services/qutebrowser.workflow
+cp ~/.dotfiles/osx/open_terminal.workflow ~/Library/Services
+
+# # set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
+# # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
+# rm -rf ~/Library/Application Support/Dock/desktoppicture.db
+# sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
+# sudo ln -sf ~/.dotfiles/setup/osx/wallpaper.png /System/Library/CoreServices/DefaultDesktop.jpg
+cp ~/.dotfiles/wallpaper.png ~/Pictures
 
 # set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en"
@@ -92,8 +99,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # screenshots
-mkdir $HOME/screenshots
-defaults write com.apple.screencapture location $HOME/screenshots/
+mkdir ~/screenshots
+defaults write com.apple.screencapture location ~/screenshots/
 
 # disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -207,9 +214,6 @@ defaults write com.apple.Mail DisableReplyAnimations -bool true
 # keyboard & trackpad                                                         #
 ###############################################################################
 
-# keyboard layout
-sudo cp -rf $DOTFILES/osx/Library/Keyboard\ Layouts/Roman.bundle $HOME/Library/Keyboard\ Layouts/
-
 # unlink media buttons
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 #launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist  # undo
@@ -241,16 +245,7 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
 
-# remap esc top caps lock
-#hidutil property --get "UserKeyMapping" # check current mapping
-sudo cp $DOTFILES/osx/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist $HOME/Library/LaunchAgents/
-launchctl load $HOME/Library/LaunchAgents/com.ldaws.CapslockBackspace.plist
-
-# xkswitch keyboardlayout switcher
-cp $DOTFILES/osx/usr/local/bin/xkbswitch /usr/local/bin
-
 ###############################################################################
-
 killall SystemUIServer
 killall Dock
 killall Finder
