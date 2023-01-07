@@ -82,6 +82,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # default editor
 export EDITOR=nvim
+
+# terminal
 export TERM=screen-256color
 
 # source plugins

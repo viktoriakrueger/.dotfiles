@@ -210,6 +210,10 @@ firefox(){
     /usr/bin/open -a Firefox $1
 }
 
+skim(){
+    /usr/bin/open -a Skim $1
+}
+
 diskutility(){
     /usr/bin/open -a "Disk Utility"
 }

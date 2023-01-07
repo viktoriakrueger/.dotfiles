@@ -42,8 +42,8 @@ fi
 if [[ "$os" == "osx" && "$KEYCHRON_USB" == "KeychronK2" || "$KEYCHRON_BLUETOOTH" == "              Services: 0x800020 < HID ACL >" ]]; then
 
   xkbswitch -s 2
-
-  /usr/bin/hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}, {"HIDKeyboardModifierMappingSrc":0x70000001D, "HIDKeyboardModifierMappingDst":0x70000001C}, {"HIDKeyboardModifierMappingSrc":0x70000001C, "HIDKeyboardModifierMappingDst":0x70000001D}]}' >/dev/null 2>&1
+# change <y> with <z>
+#   /usr/bin/hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}, {"HIDKeyboardModifierMappingSrc":0x70000001D, "HIDKeyboardModifierMappingDst":0x70000001C}, {"HIDKeyboardModifierMappingSrc":0x70000001C, "HIDKeyboardModifierMappingDst":0x70000001D}]}' >/dev/null 2>&1
 
   #
 
@@ -52,7 +52,7 @@ if [[ "$os" == "osx" && "$KEYCHRON_USB" == "KeychronK2" || "$KEYCHRON_BLUETOOTH"
 else
 
   xkbswitch -s 1
-
-  /usr/bin/hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}]}' >/dev/null 2>&1
+  # change <y> with <z>
+  # /usr/bin/hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}]}' >/dev/null 2>&1
 
 fi
