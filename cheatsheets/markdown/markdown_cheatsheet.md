@@ -10,7 +10,6 @@ das ist so und so [@Cao.2021; @Bakker.2017].
 
 [@Bakker.2017 15-17] -->
 
-
 po1: <a name=""> </a>
 po2: <a href="#"></a>
 
@@ -47,6 +46,9 @@ Well, you asked for it!
 
 
 # general
+
+# qutebrowser retrieve bibtex from doi
+open page and press e
 
 # merge files and put a blankline at the end of each file
 cd in/to/dir/ ; for f in *.txt; do (cat "${f}"; echo) >> finalfile.txt; done; cd

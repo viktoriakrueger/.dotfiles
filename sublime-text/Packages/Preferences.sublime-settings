@@ -8,4 +8,5 @@
 		"Vintage",
 	],
 	"theme": "Adaptive.sublime-theme",
+	"dictionary": "Packages/User/de_DE.dic",
 }
