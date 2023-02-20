@@ -1,7 +1,7 @@
 {
 	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
 	"font_face": "SauceCodePro Nerd Font",
-	"font_size": 13,
+	"font_size": 16,
 	"caret_style": "phase",
 	"ignored_packages":
 	[
@@ -9,4 +9,29 @@
 	],
 	"theme": "Adaptive.sublime-theme",
 	"dictionary": "Packages/User/de_DE.dic",
+	"added_words":
+	[
+		"transformationale",
+		"Beanspruchungsfolgen",
+		"eindenken",
+		"bzgl",
+		"tätigkeitsbezogenen",
+		"Ganzheitlichkeit",
+		"intrinsischen",
+		"partizipative",
+		"organisationalen",
+		"Pandemie",
+		"Homeoffice",
+		"Covid",
+		"partizipativ",
+		"zielführend",
+		"Newsletter",
+	],
+	"ignored_words":
+	[
+		"Crafting",
+		"Erwerbstätigenbefragungen",
+		"baua2020",
+		"bzw",
+	],
 }
