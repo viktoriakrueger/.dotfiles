@@ -1,0 +1,21 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Dracula Color Scheme",
+		"LaTeXTools",
+		"LSP",
+		"MarkdownPreview",
+		"Outline",
+		"Package Control",
+		"R-Box",
+		"R-IDE",
+		"Racket",
+		"SideBarEnhancements",
+		"SmartMarkdown",
+		"Table of comments",
+	],
+}

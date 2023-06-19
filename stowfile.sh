@@ -80,9 +80,6 @@ ln -sf $DOTFILES/bat/bat $CONFIG
 mkdir $CONFIG/rstudio ; ln -sf $DOTFILES/rstudio/rstudio/rstudio-prefs.json $CONFIG/rstudio ; ln -sf $DOTFILES/snippets $CONFIG/rstudio/
 mkdir $CONFIG/RStudio ; ln -sf $DOTFILES/RStudio/* $CONFIG/RStudio
 
-# psychopy
-mkdir $HOME/.psychopy3 ; ln -sf $DOTFILES/psychopy/.psychopy3/* $HOME/.psychopy3
-
 # zathura
 mkdir $CONFIG/zathura
 
