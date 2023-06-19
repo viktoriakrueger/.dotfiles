@@ -1,7 +1,7 @@
 {
 	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
 	"font_face": "SauceCodePro Nerd Font",
-	"font_size": 16,
+	"font_size": 14,
 	"caret_style": "phase",
 	"ignored_packages":
 	[

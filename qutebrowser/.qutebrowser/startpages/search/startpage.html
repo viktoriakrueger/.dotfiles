@@ -9,7 +9,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
-
 </head>
 <body>
   <style>
@@ -40,7 +39,7 @@ p{
 
 #col{
   color: white;
-  
+
 }
 text{
   stroke-width: 0.09;
@@ -53,7 +52,6 @@ text{
   fill: white;
 }
 
-
 .link {
   stroke: #555;
   stroke-width: 1.0px;
@@ -63,7 +61,6 @@ text{
   font: 17px "SauceCodePro Nerd Font", monospace ;
 
 }
-
 
 input {
   width: 35%;
@@ -88,12 +85,8 @@ form-search {
 
 </style>
 
-
 <div class="container"><center>
-    <form id="form-search" action="https://www.startpage.com/sp/search?query=" method="get" autocomplete="off">
-                    <input id="search" placeholder="" type="text" name="q" autofocus="">
-                </form>
-              </center>
+                  </center>
              <div class="row" align='center'>
       <div class="col-xsm-12" id = "col">
   <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -101,14 +94,13 @@ form-search {
 
     //setup for the d3 SVG
 
+// testing a resize method using the browser measurements
 
-// testing a resize method using the browser measurements 
-
-//  var width = window.innerWidth, 
+//  var width = window.innerWidth,
 //      height = window.innerHeight;
 
-  var width = 1300, 
-      height = 685;
+  var width = 1300,
+      height = 1300;
 
     //Set up the colour scale
     var color = d3.scale.category20c()
@@ -122,17 +114,10 @@ form-search {
       .linkDistance(70)
       .size([width, height]);
 
-
     //yes this is an svg
     var svg = d3.select(".col-xsm-12").append("svg")
       .attr("width", width)
       .attr("height", height);
-
-
-
-
-
-
 
     // hard-code some json
     var graph = {
@@ -149,7 +134,8 @@ form-search {
       {"name":" r/chess ","group":3, url: "https://www.reddit.com/r/chess/"},
       {"name":" r/python ","group":3, url: "https://www.reddit.com/r/Python/"},
       {"name":" r/math ","group":3, url: "https://www.reddit.com/r/math/"},
-      {"name":" rstudio-blog ","group":9, url: "https://www.rstudio.com/blog/"}
+      {"name":" rstudio-blog ","group":9, url: "https://www.rstudio.com/blog/"},
+      {"name":" tagesschau ","group":9, url: "https://www.tagesschau.de/sendung/tagesschau/index.html"},
 
       ],
       "links":[
@@ -165,10 +151,8 @@ form-search {
       {"source":9,"target":3,"value":1},
       {"source":10,"target":3,"value":1},
       {"source":11,"target":3,"value":1},
-      {"source":12,"target":4,"value":1}
-
-
-
+      {"source":12,"target":4,"value":1},
+      {"source":13,"target":4,"value":1}
 
     ]
     }
@@ -203,7 +187,6 @@ form-search {
 
         })
 
-
   //give my children  some attributes!
       node.each(function(d){
         var thisNode = d3.select(this);
@@ -230,7 +213,6 @@ form-search {
             .text(function(d) { return d.name; });
         }
       });
-
 
   // force be with you
       force.on("tick", function () {
@@ -265,9 +247,7 @@ form-search {
           });
       });
 
-
   </script>
-
 
   </div>
   </div>

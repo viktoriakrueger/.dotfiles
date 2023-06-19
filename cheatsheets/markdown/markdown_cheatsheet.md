@@ -43,7 +43,9 @@ Here is a simple footnote[^2]. With some additional text after it.
 Well, you asked for it!
 </details>
 
-
+quotation marks german
+alt gr + v „
+alt gr + b “
 
 # general
 
@@ -51,7 +53,7 @@ Well, you asked for it!
 open page and press e
 
 # merge files and put a blankline at the end of each file
-cd in/to/dir/ ; for f in *.txt; do (cat "${f}"; echo) >> finalfile.txt; done; cd
+cd in/to/dir/ ; for f in *.txt; do (cat "${f}"; echo) >> finalfile.txt; done; cd*
 
 
 # unite / merge pdfs * means all files in this dir
