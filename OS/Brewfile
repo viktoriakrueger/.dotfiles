@@ -5,7 +5,6 @@ tap "common-fate/granted"  # Tools for managing credentials or access
 tap "dracula/install"  # Dracula theme for various applications
 tap "homebrew/bundle"  # Homebrew Bundle for managing Homebrew dependencies via a Brewfile
 tap "homebrew/services"  # Manage background services with Homebrew
-tap "int128/kubelogin"  # Kubernetes authentication management tool
 tap "koekeishiya/formulae"  # Koekeishiya's tools and utilities for macOS
 tap "osx-cross/arm"  # Cross-compiling ARM binaries on macOS
 tap "osx-cross/avr"  # Cross-compiling AVR binaries on macOS
@@ -68,7 +67,6 @@ brew "rubberband"  # Audio time-stretching and pitch-shifting library
 brew "sdl2"  # Simple DirectMedia Layer library
 brew "svt-av1"  # Scalable Video Technology for AV1 encoder
 brew "tesseract"  # OCR (Optical Character Recognition) engine
-brew "ffmpeg"  # Multimedia framework for audio and video processing
 brew "fzf"  # Command-line fuzzy finder
 brew "gd"  # Graphics Draw library
 brew "gh"  # GitHub CLI
@@ -129,7 +127,6 @@ brew "pass-git-helper"  # Git helper for the `pass` password manager
 brew "perl"  # Perl programming language
 brew "tcl-tk"  # Tcl/Tk programming language and toolkit
 brew "pillow"  # Python Imaging Library (PIL) fork
-brew "poppler"  # PDF rendering library
 brew "prettier"  # Code formatter
 brew "pyenv"  # Tool for managing multiple Python versions
 brew "pygments", link: false  # Syntax highlighter for code (not linked)
@@ -143,13 +140,10 @@ brew "ruby"  # Ruby programming language
 brew "sd"  # Simple, declarative CLI for finding and replacing text
 brew "shellcheck"  # Static analysis tool for shell scripts
 brew "shfmt"  # Shell script formatter
-brew "signal-cli"  # Command-line interface for Signal messaging
 brew "stylua"  # Lua code formatter
-brew "texlive"  # Comprehensive TeX document production system
 brew "tldr"  # Simplified and community-driven man pages
 brew "tmux"  # Terminal multiplexer
 brew "urlview"  # Tool to view URLs from text
-brew "vdirsyncer"  # Synchronize calendars and address books
 brew "wget"  # Network downloader
 brew "xsv"  # CSV command-line toolkit
 brew "yarn"  # Package manager for JavaScript

@@ -35,7 +35,7 @@ scripts:
 	sudo ln -sf $(CUR_DIR)/src/* /usr/local/bin/;
 
 .PHONY: symlinks
-symlinks: alacritty subl
+symlinks:
 	$(shell src/symlinks)
 
 .PHONY: subl
