@@ -45,7 +45,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
-[[ ! -f $DOTFILES/HOME/.zsh/.p10k_${os}.zsh ]] || source $DOTFILES/HOME/.zsh/.p10k_${os}.zsh
+[[ ! -f $DOTFILES/HOME/.zsh/.p10k.zsh ]] || source $DOTFILES/HOME/.zsh/.p10k.zsh
 
 # fzf
 eval "$(fzf --zsh)"
@@ -156,3 +156,5 @@ fi
 
 clear
 
+# To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
+[[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
